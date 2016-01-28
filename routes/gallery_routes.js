@@ -13,7 +13,7 @@ router.route('/')
   .get( function ( req, res ) {
     Gallery.findAll()
       .then( function ( gallery ) {
-        res.render( 'landing_page.jade' );
+        res.render( 'layout.jade' );
       });
   })
   .post( function (req, res ) {

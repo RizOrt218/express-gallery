@@ -8,6 +8,7 @@ app.use( bodyParser.urlencoded ( { extended : true } ) );
 var userRoute = require( './routes/user_routes' );
 var galleryRoute = require( './routes/gallery_routes.js' );
 
+app.use(express.static('public'));
 app.use( '/users', userRoute );
 app.use( '/gallery', galleryRoute );
 
