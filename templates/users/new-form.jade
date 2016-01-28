@@ -1,0 +1,13 @@
+extends ./../layout
+
+block content
+  form(name="edit-products", method="POST", action="/products/")
+    input(type="hidden", name="_method", placeholder="POST")
+    div.name Name:&nbsp
+      input(type="text", name="name", placeholder="..." autofocus)
+    div.price Price:&nbsp
+      input(type="text", name="price", placeholder="...")
+    div.inventory Inventory:&nbsp
+      input(type="text", name="inventory", placeholder="...")
+    div.submit
+      input(type="submit", value="submit")
