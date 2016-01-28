@@ -1,7 +1,11 @@
 doctype html
 html(lang="en")
   head
-    title
+    style
+      include ./../public/css/style.css
+      title
   body
     h1 Welcome to our page, now get out!
-    block content
+    div.mainPic
+      img(src='http://www.placeholder.org/images/Placeholder-NameIs-LogoLinks.gif')
+      block content
