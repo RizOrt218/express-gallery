@@ -4,5 +4,6 @@ block content
   ul
     each photo in gallery
       H4 #{photo.title}
-      a(href='#{photo.link}')
+      a(href='gallery/#{photo.id}')
           img(src='#{photo.link}')
+      p #{photo.description}

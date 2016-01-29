@@ -37,7 +37,7 @@ router.route('/')
     Gallery.findAll()
       .then( function ( allPhotos ) {
         res.render( 'users/allPhotos', {
-          'gallery' : allPhotos
+          'gallery' : allPhotos,
         });
       });
   })
@@ -67,8 +67,10 @@ router.route('/:id')
         id : req.params.id
       }
     })
-    .then( function ( gallery ) {
-      res.json( gallery );
+    .then( function ( singleImg ) {
+      res.render( 'users/singleImg', {
+        'gallery' : singleImg
+      });
     });
   })
   .put( function ( req, res ) {

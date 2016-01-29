@@ -1,0 +1,14 @@
+extends ./../layout
+
+block content
+  ul
+    each photo in gallery
+      H4 #{photo.title}
+      a(href='gallery/#{photo.id}')
+          img(src='#{photo.link}')
+      p #{photo.description}
+      form(method="GET", action="/gallery/#{photo.id}/edit")
+        button(type="submit", value="submit") edit
+      form(name="delete-products", method="POST", action="/gallery")
+        input(type="hidden", name="_method", value="DELETE")
+        button(type="submit", value="submit") delete
