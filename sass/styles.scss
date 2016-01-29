@@ -1,6 +1,17 @@
-$colorVariable: #C1A385;
-@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+* {
+  margin: 0px;
+}
 
+$colorVariable: #C1A385;
+
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+
+$colorVariable: #F8FEEE;
+$poiret-one: 'Poiret One';
+
+//=========== STATIC PAGE ===============//
 body {
   background-color: $colorVariable;
   display: flex;
@@ -77,4 +88,91 @@ body {
 
 .button.galleries {
   // border: 1px solid yellow;
+  padding: 10px;
+}
+
+h1 {
+  color: #EEE0C4;
+  font-family: $poiret-one;
+  font-size: 45px;
+}
+
+//========= ALL PHOTOS =============//
+
+.mainPageButton {
+
+}
+
+.mainImage {
+  margin: auto;
+  // background-color: blue;
+  width: 700px;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+//========= EACH PHOTO CONTENT =======
+h4 {
+  font-family: $poiret-one;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.thumbnailImages {
+  // background-color: yellow;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.eachPhotoContent {
+  margin: auto;
+  // background-color: purple;
+  margin-bottom: 20px;
+}
+
+.uploadedPhoto {
+  height: 300px;
+  width: 300px;
+  border-radius: 0px 0px 0px 0px;
+  -moz-border-radius: 0px 0px 0px 0px;
+  -webkit-border-radius: 0px 0px 0px 0px;
+  border: 6px double #AF9F98;
+
+}
+
+.photoDescription {
+
+}
+
+
+//========= NEW FORM ==================//
+div.inputTextName {
+  font-family: $poiret-one;
+  background-color: orange;
+  font-size: 30px;
+}
+
+//=== SINGLE PHOTO /gallery/:id ========//
+
+
+.singlePageContent {
+  display: flex;
+  flex-flow: row wrap;
+  // background-color: gray;
+  margin: auto;
+}
+.singleImage {
+  margin: auto;
+  height: 70%;
+  width: 70%;
+}
+
+.singlePageDescription {
+  background-color: pink;
+  height: 70%;
+  margin: auto;
+}
+
+.singlePageButtons {
+
 }

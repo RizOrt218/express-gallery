@@ -1,4 +1,10 @@
+* {
+  margin: 0px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+
 body {
   background-color: #C1A385;
   display: flex;
@@ -53,3 +59,59 @@ body {
   text-decoration: none;
   flex-grow: 1;
   margin: 10px; }
+
+body {
+  background-color: #F8FEEE;
+  padding: 10px; }
+
+h1 {
+  color: #EEE0C4;
+  font-family: "Poiret One";
+  font-size: 45px; }
+
+.mainImage {
+  margin: auto;
+  width: 700px;
+  height: auto;
+  padding-bottom: 10px; }
+
+h4 {
+  font-family: "Poiret One";
+  font-size: 30px;
+  margin-bottom: 5px; }
+
+.thumbnailImages {
+  display: flex;
+  flex-flow: row wrap; }
+
+.eachPhotoContent {
+  margin: auto;
+  margin-bottom: 20px; }
+
+.uploadedPhoto {
+  height: 300px;
+  width: 300px;
+  border-radius: 0px 0px 0px 0px;
+  -moz-border-radius: 0px 0px 0px 0px;
+  -webkit-border-radius: 0px 0px 0px 0px;
+  border: 6px double #AF9F98; }
+
+div.inputTextName {
+  font-family: "Poiret One";
+  background-color: orange;
+  font-size: 30px; }
+
+.singlePageContent {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto; }
+
+.singleImage {
+  margin: auto;
+  height: 70%;
+  width: 70%; }
+
+.singlePageDescription {
+  background-color: pink;
+  height: 70%;
+  margin: auto; }

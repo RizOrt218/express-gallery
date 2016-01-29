@@ -5,6 +5,18 @@ html(lang="en")
     title
   body
     h1 Welcome to our page, now get out!
-    div.mainPic
-      img(src='http://www.placeholder.org/images/Placeholder-NameIs-LogoLinks.gif')
+
+    div.mainPageButton
+    //button to post new image
+    form(class="postNewButton")(method="GET", action="/gallery/new")
+      button(type="submit", value="submit") Post New
+
+    //button to log out
+    form(class="logoutButton")(method="GET", action="/gallery/")
+      button(type="submit", value="submit") Logout
+
+    div.mainImage
+      img(class="mainImage")(src='http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/07/9-Beautiful-HD-Wallpapers-0.jpg')
+
+    div.thumbnailImages
       block content

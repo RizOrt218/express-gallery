@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    link(rel="stylesheet" href="./../css/styles.css")
+    title
+  body
+    each photo in gallery
+      h4 #{photo.title}
+
+      div.singlePageContent
+        img(class="singleImage")(src='#{photo.link}')
+
+        div.singlePageDescription
+          p(class="description") #{photo.description}
+
+          div.singlePageButtons
+            form(class="editButton")(method="GET", action="/gallery/#{photo.id}/edit")
+              button(type="submit", value="submit") edit
+
+            form(class="deleteButton")(name="delete-photo", method="POST", action="/gallery")
+              input(type="hidden", name="_method", value="DELETE")
+              button(type="submit", value="submit") delete

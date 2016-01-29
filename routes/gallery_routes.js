@@ -17,27 +17,27 @@ router.route('/new')
     .then( function ( gallery ) {
       res.render('users/new-form');
     });
-  })
-  .post( function (req, res ) {
-    Gallery.create(
-      {
-        author: req.body.author,
-        title: req.body.title,
-        link: req.body.link,
-        description: req.body.description
-      }
-    )
-    .then( function ( ) {
-      res.redirect( '/gallery' );
-    });
+  // })
+  // .post( function (req, res ) {
+  //   Gallery.create(
+  //     {
+  //       author: req.body.author,
+  //       title: req.body.title,
+  //       link: req.body.link,
+  //       description: req.body.description
+  //     }
+  //   )
+  //   .then( function ( ) {
+  //     res.redirect( '/gallery' );
+  //   });
   });
 
 router.route('/')
   .get( function ( req, res ) {
     Gallery.findAll()
       .then( function ( allPhotos ) {
-        res.render( 'test_landing_page', {
-          gallery : allPhotos[0]
+        res.render( 'users/allPhotos', {
+          'gallery' : allPhotos,
         });
       });
   })
@@ -73,8 +73,10 @@ router.route('/:id')
         id : req.params.id
       }
     })
-    .then( function ( gallery ) {
-      res.json( gallery );
+    .then( function ( singleImg ) {
+      res.render( 'users/singleImg', {
+        'gallery' : singleImg
+      });
     });
   })
   .put( function ( req, res ) {
