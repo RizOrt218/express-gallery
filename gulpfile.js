@@ -1,6 +1,13 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
+gulp.task('connect', function(){
+  connect.server({
+    root: 'public',
+    livereload: true
+  });
+});
+
 gulp.task('sass', function () {
   return gulp.src('sass/styles.scss')
     .pipe(sass().on('error', sass.logError))

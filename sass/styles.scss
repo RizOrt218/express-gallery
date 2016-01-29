@@ -13,13 +13,28 @@ $poiret-one: 'Poiret One';
 
 //=========== STATIC PAGE ===============//
 body {
-  background-color: $colorVariable;
+  background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.mainHeader {
+  background-color: #9dcca6;
+  opacity: 0.3;
+  font-family: $poiret-one;
+  font-size: 25px;
+  padding: 5%;
+  margin-bottom: 20px;
+}
+
+//========== LANDING PAGE ===============//
+
+.landingPage {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}
-
-.landingPage {
   background-color: #D7E0D9;
 }
 
@@ -91,24 +106,27 @@ body {
   padding: 10px;
 }
 
-h1 {
-  color: #EEE0C4;
-  font-family: $poiret-one;
-  font-size: 45px;
-}
 
 //========= ALL PHOTOS =============//
 
-.mainPageButton {
-
+.topPage {
+  display: flex;
+  flex-flow: row wrap;
 }
 
+.mainPageButton {
+  margin: auto;
+}
 .mainImage {
   margin: auto;
   // background-color: blue;
   width: 700px;
   height: auto;
   padding-bottom: 10px;
+}
+
+body.wholeGallery {
+  background-color: white;
 }
 
 //========= EACH PHOTO CONTENT =======
@@ -122,6 +140,7 @@ h4 {
   // background-color: yellow;
   display: flex;
   flex-flow: row wrap;
+  padding: 10px 5%;
 }
 
 .eachPhotoContent {
@@ -137,7 +156,6 @@ h4 {
   -moz-border-radius: 0px 0px 0px 0px;
   -webkit-border-radius: 0px 0px 0px 0px;
   border: 6px double #AF9F98;
-
 }
 
 .photoDescription {

@@ -101,7 +101,7 @@ router.route('/:id')
       }
     })
     .then( function ( gallery ) {
-      res.json( gallery );
+      res.redirect( '/gallery' );
     });
   });
 
