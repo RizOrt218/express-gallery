@@ -36,7 +36,7 @@ router.route('/')
   .get( function ( req, res ) {
     Gallery.findAll()
       .then( function ( allPhotos ) {
-        res.render( 'layout', {
+        res.render( 'test_landing_page', {
           gallery : allPhotos[0]
         });
       });
@@ -59,6 +59,12 @@ router.route('/new')
   .get( function ( req, res ) {
 
   });
+
+router.route('/test')
+  .get( function (req, res ) {
+    res.render( 'test_landing_page' );
+  }
+);
 
 router.route('/:id')
   .get( function ( req, res ) {
@@ -111,6 +117,7 @@ router.route('/:id/edit')
       });
     });
 });
+
 
 
 module.exports = router;
