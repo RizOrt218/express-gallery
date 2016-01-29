@@ -1,5 +1,37 @@
-$colorVariable: #F8FEEE;
+* {
+  margin: 0px;
+}
 
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+$colorVariable: #F8FEEE;
+$poiret-one: 'Poiret One';
+//=========== ALL PHOTOS ===============//
 body {
   background-color: $colorVariable;
+  padding: 5%;
+}
+
+h1 {
+  color: #EEE0C4;
+  font-family: $poiret-one;
+  font-size: 45px;
+  background-color: pink;
+  margin-bottom: 4%;
+}
+
+.allImage {
+  width: 30%;
+  height: 40%;
+  background-color: green;
+}
+
+.mainImage {
+  background-color: blue;
+}
+
+//========= NEW FORM ==================//
+div.inputTextName {
+  font-family: $poiret-one;
+  background-color: orange;
+  font-size: 30px;
 }
