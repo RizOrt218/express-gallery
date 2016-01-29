@@ -1,12 +1,10 @@
-* {
-  margin: 0px;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+* {
+  margin: 0px; }
 
 body {
-  background-color: #C1A385;
+  background-color: #F8FEEE;
   display: flex;
   flex-flow: row wrap;
   justify-content: center; }
@@ -60,8 +58,7 @@ body {
   flex-grow: 1;
   margin: 10px; }
 
-body {
-  background-color: #F8FEEE;
+.button.galleries {
   padding: 10px; }
 
 h1 {
