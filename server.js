@@ -2,8 +2,16 @@ var express = require( 'express' );
 var app = express();
 var db = require( './models' );
 var bodyParser = require( 'body-parser' );
+var methodOverride = require('method-override');
+
 
 app.use( bodyParser.urlencoded ( { extended : true } ) );
+
+app.use(methodOverride(function(req,res){
+  var method = req.body._method;
+  delete req.body._method;
+  return method;
+}));
 
 var userRoute = require( './routes/user_routes' );
 var galleryRoute = require( './routes/gallery_routes.js' );
