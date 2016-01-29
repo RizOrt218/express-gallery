@@ -3,5 +3,6 @@ extends ./../layout
 block content
   ul
     each photo in gallery
-      li Product Name:&nbsp
-        a(href="/gallery/#{photo.id}") #{photo.title}&nbsp
+      li Photos:&nbsp
+        a(href="/gallery/#{photo.link}") #{photo.link}&nbsp
+      H4 TITLE
