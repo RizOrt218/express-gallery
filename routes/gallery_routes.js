@@ -17,27 +17,28 @@ router.route('/new')
     .then( function ( gallery ) {
       res.render('users/new-form');
     });
-  })
-  .post( function (req, res ) {
-    Gallery.create(
-      {
-        author: req.body.author,
-        title: req.body.title,
-        link: req.body.link,
-        description: req.body.description
-      }
-    )
-    .then( function ( ) {
-      res.redirect( '/gallery' );
-    });
+  // })
+  // .post( function (req, res ) {
+  //   Gallery.create(
+  //     {
+  //       author: req.body.author,
+  //       title: req.body.title,
+  //       link: req.body.link,
+  //       description: req.body.description
+  //     }
+  //   )
+  //   .then( function ( ) {
+  //     res.redirect( '/gallery' );
+  //   });
   });
 
 router.route('/')
   .get( function ( req, res ) {
     Gallery.findAll()
       .then( function ( allPhotos ) {
-        res.render( 'layout', {
-          gallery : allPhotos[0]
+        console.log("imageLINK", res);
+        res.render( 'users/allPhotos', {
+          'gallery' : allPhotos
         });
       });
   })
