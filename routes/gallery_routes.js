@@ -13,7 +13,7 @@ router.route('/')
   .get( function ( req, res ) {
     Gallery.findAll()
       .then( function ( gallery ) {
-        res.render( 'layout.jade' );
+        res.render( 'layout' );
       });
   })
   .post( function (req, res ) {
@@ -25,9 +25,14 @@ router.route('/')
       }
     )
     .then( function ( gallery ) {
-      res.json( gallery );
+      res.redirect( '/gallery' );
     });
 });
+
+router.route('/new')
+  .get( function ( req, res ) {
+
+  });
 
 router.route('/:id')
   .get( function ( req, res ) {
@@ -51,7 +56,7 @@ router.route('/:id')
       }
     })
     .then( function ( gallery ) {
-      res.json( gallery );
+      res.redirect( '/gallery' );
     });
   })
   .delete( function ( req, res ) {
@@ -65,14 +70,20 @@ router.route('/:id')
     });
   });
 
-router.route('/new')
-  .get( function ( req, res ) {
 
-});
 
 router.route('/:id/edit')
   .get( function ( req, res ) {
-
+    Gallery.findAll({
+      where: {
+        id : req.params.id
+      }
+    })
+    .then( function ( data ) {
+      res.render( 'gallery/edit', {
+        'gallery' : data[0]
+      });
+    });
 });
 
 
