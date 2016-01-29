@@ -1,9 +1,14 @@
 extends ./../layout
 
 block content
-  ul
-    each photo in gallery
-      H4 #{photo.title}
+  each photo in gallery
+
+    div.eachPhotoContent
+      h4 #{photo.title}
+
+      //every photo that gets uploaded
       a(href='gallery/#{photo.id}')
-          img(src='#{photo.link}')
-      p #{photo.description}
+        img(class="uploadedPhoto")(src='#{photo.link}')
+
+      div.photoDescription
+        p #{photo.description}
