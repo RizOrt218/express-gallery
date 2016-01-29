@@ -6,8 +6,19 @@ var Gallery = db.Gallery;
 
 var bodyParser = require( 'body-parser' );
 
-
 router.use( bodyParser.urlencoded ( { extended : true } ) );
+
+//will only render the form page to add values into
+//the gallery.
+//users/new-form
+router.route('/new')
+  .get(function(req, res) {
+    Gallery.findAll()
+    .then( function ( gallery ) {
+      res.render('users/new-form');
+    });
+  });
+
 
 router.route('/')
   .get( function ( req, res ) {
@@ -65,10 +76,6 @@ router.route('/:id')
     });
   });
 
-router.route('/new')
-  .get( function ( req, res ) {
-
-});
 
 router.route('/:id/edit')
   .get( function ( req, res ) {
