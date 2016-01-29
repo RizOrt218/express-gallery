@@ -1,14 +1,20 @@
-extends ./../layout
-
-block content
+doctype html
+html(lang="en")
+  head
+    link(rel="stylesheet" href="./../css/styles.css")
+    title
+  body
   ul
     each photo in gallery
-      H4 #{photo.title}
-      a(href='gallery/#{photo.id}')
-          img(src='#{photo.link}')
-      p #{photo.description}
-      form(method="GET", action="/gallery/#{photo.id}/edit")
+      h4 #{photo.title}
+
+      img(src='#{photo.link}')
+
+      p(class="description") #{photo.description}
+
+      form(class="editButton")(method="GET", action="/gallery/#{photo.id}/edit")
         button(type="submit", value="submit") edit
-      form(name="delete-products", method="POST", action="/gallery")
+
+      form(class="deleteButton")(name="delete-photo", method="POST", action="/gallery")
         input(type="hidden", name="_method", value="DELETE")
         button(type="submit", value="submit") delete

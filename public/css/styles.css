@@ -1,2 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+* {
+  margin: 0px; }
+
 body {
-  background-color: #F8FEEE; }
+  background-color: #F8FEEE;
+  padding: 5%; }
+
+h1 {
+  color: #EEE0C4;
+  font-family: "Poiret One";
+  font-size: 45px;
+  background-color: pink;
+  margin-bottom: 4%; }
+
+.allImage {
+  width: 30%;
+  height: 40%;
+  background-color: green; }
+
+.mainImage {
+  background-color: blue; }
+
+div.inputTextName {
+  font-family: "Poiret One";
+  background-color: orange;
+  font-size: 30px; }

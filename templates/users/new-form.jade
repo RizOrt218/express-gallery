@@ -1,10 +1,20 @@
-form(name="new_photo", method="POST", action="/gallery")
-  input(type="hidden", name="_method", placeholder="POST")
-  div.author Author&nbsp:&nbsp
-    input(type="text", name="author", placeholder="..." autofocus)
-  div.link Link&nbsp:&nbsp
-    input(type="text", name="link", placeholder="...")
-  div.description Description&nbsp:&nbsp
-    input(type="text", name="description", placeholder="...")
-  div.submit
-    input(type="submit", value="submit")
+doctype html
+html(lang="en")
+  head
+    link(rel="stylesheet" href="./../css/styles.css")
+    title
+  body
+    form(name="new_photo", method="POST", action="/gallery")
+      input(type="hidden", name="_method", placeholder="POST")
+      div.inputTextName Author&nbsp
+        input(type="text", name="author", placeholder="..." autofocus)
+      div.inputTextName Title&nbsp
+        input(type="text", name="title", placeholder="..." autofocus)
+      div.inputTextName Link&nbsp
+        input(type="text", name="link", placeholder="...")
+      div.inputTextName Description&nbsp
+        input(type="text", name="description", placeholder="...")
+      div.submit
+        input(type="submit", value="Create New Post")
+
+
