@@ -1,0 +1,7 @@
+extends ./../layout
+
+block content
+  ul
+    each photo in gallery
+      li Product Name:&nbsp
+        a(href="/gallery/#{photo.id}") #{photo.title}&nbsp

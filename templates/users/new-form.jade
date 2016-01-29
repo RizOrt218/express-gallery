@@ -1,4 +1,5 @@
 form(name="new_photo", method="POST", action="/gallery")
+  input(type="hidden", name="_method", placeholder="POST")
   div.author Author&nbsp:&nbsp
     input(type="text", name="author", placeholder="..." autofocus)
   div.link Link&nbsp:&nbsp
