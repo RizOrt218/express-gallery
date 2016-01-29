@@ -36,7 +36,6 @@ router.route('/')
   .get( function ( req, res ) {
     Gallery.findAll()
       .then( function ( allPhotos ) {
-        console.log("imageLINK", res);
         res.render( 'users/allPhotos', {
           'gallery' : allPhotos
         });
