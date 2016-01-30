@@ -1,5 +1,13 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var connect = require('gulp-connect');
+var nodemon = require('gulp-nodemon');
+
+gulp.task('start', function () {
+  nodemon({
+    script : 'server.js'
+  });
+});
 
 gulp.task('connect', function(){
   connect.server({
@@ -14,9 +22,15 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('watch', function () {
-  gulp.watch('src/**/*.js', ['babel']);
-  gulp.watch('sass/styles.scss', ['sass']);
+gulp.task('livereload', function (){
+  gulp.src('./public/**/*')
+  .pipe(connect.reload());
 });
 
-gulp.task('dev', ['sass', 'watch']);
+gulp.task('watch', function () {
+  // gulp.watch('./scss/**/*.scss', ['sass']);
+  gulp.watch('sass/styles.scss', ['sass']);
+  gulp.watch('./public/**/*', ['livereload']);
+});
+
+gulp.task('default', ['connect', 'watch', 'sass', 'start']);

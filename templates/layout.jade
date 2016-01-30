@@ -4,21 +4,20 @@ html(lang="en")
     link(rel="stylesheet" href="/css/styles.css")
     title
   body
-    div.mainHeader
+    div.topbar.mainHeader
       h1 Welcome to our page, now get out!
 
-    div.topPage
-      div.mainPageButton
+      div.topbar.mainPageButton
         //button to post new image
-        form(class="button")(method="GET", action="/gallery/new")
+        form.button.layoutButton(method="GET", action="/gallery/new")
           button(type="submit", value="submit") Post New
 
         //button to log out
-        form(class="button")(method="GET", action="/home")
+        form.button.layoutButton(method="GET", action="/home")
           button(type="submit", value="submit") Logout
 
-      div.mainImage
-        img(class="mainImage")(src='http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/07/9-Beautiful-HD-Wallpapers-0.jpg')
+    div.topPage
+      img.mainImage(src='http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/07/9-Beautiful-HD-Wallpapers-0.jpg')
 
-    div.thumbnailImages
+    div.block.thumbnailImages
       block content

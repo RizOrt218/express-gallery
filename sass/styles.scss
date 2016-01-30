@@ -2,6 +2,10 @@
   margin: 0px;
 }
 
+// MEDIA QUERY RANGES
+$medium: "only screen and (min-width:600px)";
+$large: "only screen and (min-width:900px)";
+
 $colorVariable: #C1A385;
 
 @import url(https://fonts.googleapis.com/css?family=Rock+Salt);
@@ -10,24 +14,6 @@ $colorVariable: #C1A385;
 
 $colorVariable: #F8FEEE;
 $poiret-one: 'Poiret One';
-
-//=========== STATIC PAGE ===============//
-body {
-  background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.mainHeader {
-  background-color: #9dcca6;
-  opacity: 0.3;
-  font-family: $poiret-one;
-  font-size: 25px;
-  padding: 5%;
-  margin-bottom: 20px;
-}
 
 //========== LANDING PAGE ===============//
 
@@ -75,7 +61,7 @@ body {
 .button {
   height: 30px;
   width: 100px;
-   background: #9dcca6;
+  background: #9dcca6;
   background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
   background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
   background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
@@ -113,62 +99,143 @@ body {
   text-decoration: none;
 }
 
+//=========== STATIC PAGE ===============//
+body {
+  background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  transition: all 3s ease;
+}
+.topbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.mainPageButton {
+  padding-left: 6%;
+}
+
+.mainHeader {
+  background-color: #9dcca6;
+  opacity: 0.3;
+  font-family: $poiret-one;
+  font-size: 20px;
+  padding: 2%;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 10px #666666;
+  transition: all 1s ease;
+}
 
 //========= ALL PHOTOS =============//
 
 .topPage {
   display: flex;
   flex-flow: row wrap;
+  // background-color: pink;
+  justify-content: center;
 }
 
-.mainPageButton {
-  margin: auto;
-}
 .mainImage {
-  margin: auto;
-  // background-color: blue;
-  width: 700px;
-  height: auto;
+  height: 150px;
+  width: 375px;
   padding-bottom: 10px;
-}
+  border-bottom: solid 1px #2D530A;
+  transition: all 1s ease;
 
-body.wholeGallery {
-  background-color: white;
+  @media #{ $medium } {
+    height: 250px;
+    width: 650px;
+    padding: 10px;
+    font-size: 30px;
+    line-height: 21px;
+  }
+  @media #{ $large } {
+    height: 400px;
+    width: 1090px;
+    font-size: 35px;
+    line-height: 24px;
+    // padding-bottom: 10px;
+    // padding-top: 10px;
+  }
 }
 
 //========= EACH PHOTO CONTENT =======
+
 h4 {
+  // background-color: blue;
   font-family: $poiret-one;
-  font-size: 30px;
-  margin-bottom: 5px;
+  font-size: 25px;
+  margin-bottom: 2px;
+
+  @media #{ $medium } {
+    padding: 10px;
+    font-size: 30px;
+    // line-height: 21px;
+  }
+
+  @media #{ $large } {
+    font-size: 35px;
+    line-height: 24px;
+    // padding-bottom: 10px;
+    // padding-top: 10px;
+  }
 }
 
 .thumbnailImages {
-  // background-color: yellow;
+  // background-color: purple;
   display: flex;
   flex-flow: row wrap;
-  padding: 10px 5%;
-}
+  justify-content: center;
+  transition: all 2s ease;
 
+  @media #{ $medium } {
+    padding: 10px 5%;
+  }
+
+  @media #{ $large } {
+    padding: 10px 15%;
+  }
+}
 .eachPhotoContent {
-  margin: auto;
-  // background-color: purple;
-  margin-bottom: 20px;
+  // background-color: orange;
+  padding-top: 10px;
+  margin: 10px 2px;
 }
 
 .uploadedPhoto {
-  height: 300px;
-  width: 300px;
+  // background-color: pink;
   border-radius: 0px 0px 0px 0px;
   -moz-border-radius: 0px 0px 0px 0px;
   -webkit-border-radius: 0px 0px 0px 0px;
   border: 6px double #AF9F98;
+  justify-content: space-between;
+  height: 200px;
+  width: 350px;
+
+  // flex: 0 0 100%;
+
+  @media #{ $medium } {
+    flex: 0 0 100%;
+    // height: 250px;
+    // width: 350px;
+  }
+
+  @media #{ $large } {
+    flex: 0 0 100%;
+    // height: 250px;
+    // width: 370px;
+  }
 }
 
+.uploadedPhoto:hover {
+
+}
 .photoDescription {
 
 }
-
 
 //========= NEW FORM ==================//
 div.inputTextName {
@@ -179,25 +246,35 @@ div.inputTextName {
 
 //=== SINGLE PHOTO /gallery/:id ========//
 
-
-.singlePageContent {
-  display: flex;
-  flex-flow: row wrap;
-  // background-color: gray;
-  margin: auto;
-}
-.singleImage {
-  margin: auto;
-  height: 70%;
-  width: 70%;
-}
-
-.singlePageDescription {
+.singleBlock {
   background-color: pink;
-  height: 70%;
-  margin: auto;
+  justify-content: center;
+  margin-left: 20px;
+  display: flex;
+  // flex-flow: row wrap;
+}
+// .singlePageContent {
+//   height: 500px;
+//   width: 750px;
+//   background-color: gray;
+//   // margin: auto;
+// }
+// .singlePageButtons {
+//   display: flex;
+//   flex-flow: row nowrap;
+//   background-color: purple;
+// }
+.singleImage {
+  height: 500px;
+  width: 750px;
 }
 
-.singlePageButtons {
+// .singlePageDescription {
+//   background-color: pink;
+//   height: 70%;
+//   margin: auto;
+// }
 
-}
+// .singlePageButtons {
+
+// }
