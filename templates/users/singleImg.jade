@@ -4,20 +4,21 @@ html(lang="en")
     link(rel="stylesheet" href="./../css/styles.css")
     title
 
-  body(class="wholeGallery")
+  body
     each photo in gallery
       h4 #{photo.title}
 
-      div.singlePageContent
-        img(class="singleImage")(src='#{photo.link}')
+      div.singleBlock.singlePageButtons
+        form.editButton(method="GET", action="/gallery/#{photo.id}/edit")
+          button(type="submit", value="submit") edit
 
-        div.singlePageDescription
-          p(class="description") #{photo.description}
+        form.deleteButton(name="delete-photo", method="POST", action="/gallery")
+          input(type="hidden", name="_method", value="DELETE")
+          button(type="submit", value="submit") delete
 
-          div.singlePageButtons
-            form(class="editButton")(method="GET", action="/gallery/#{photo.id}/edit")
-              button(type="submit", value="submit") edit
+      div.singleBlock
+        img.singleImage(src='#{photo.link}')
 
-            form(class="deleteButton")(name="delete-photo", method="POST", action="/gallery")
-              input(type="hidden", name="_method", value="DELETE")
-              button(type="submit", value="submit") delete
+
+      div.singleBlock.singlePageDescription
+        p.description #{photo.description}

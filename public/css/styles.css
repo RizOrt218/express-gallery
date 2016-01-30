@@ -3,21 +3,6 @@
 * {
   margin: 0px; }
 
-body {
-  background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-.mainHeader {
-  background-color: #9dcca6;
-  opacity: 0.3;
-  font-family: "Poiret One";
-  font-size: 25px;
-  padding: 5%;
-  margin-bottom: 20px; }
-
 .landingPage {
   display: flex;
   flex-flow: row wrap;
@@ -73,60 +58,112 @@ body {
 .button.galleries {
   padding: 10px; }
 
-.topPage {
+body {
+  background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  transition: all 3s ease; }
+
+.topbar {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  justify-content: center; }
 
 .mainPageButton {
-  margin: auto; }
+  padding-left: 6%; }
+
+.mainHeader {
+  background-color: #9dcca6;
+  opacity: 0.3;
+  font-family: "Poiret One";
+  font-size: 20px;
+  padding: 2%;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 10px #666666;
+  transition: all 1s ease; }
+
+.topPage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
 
 .mainImage {
-  margin: auto;
-  width: 700px;
-  height: auto;
-  padding-bottom: 10px; }
-
-body.wholeGallery {
-  background-color: white; }
+  height: 150px;
+  width: 375px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #2D530A;
+  transition: all 1s ease; }
+  @media only screen and (min-width: 600px) {
+    .mainImage {
+      height: 250px;
+      width: 650px;
+      padding: 10px;
+      font-size: 30px;
+      line-height: 21px; } }
+  @media only screen and (min-width: 900px) {
+    .mainImage {
+      height: 400px;
+      width: 1090px;
+      font-size: 35px;
+      line-height: 24px; } }
 
 h4 {
   font-family: "Poiret One";
-  font-size: 30px;
-  margin-bottom: 5px; }
+  font-size: 25px;
+  margin-bottom: 2px; }
+  @media only screen and (min-width: 600px) {
+    h4 {
+      padding: 10px;
+      font-size: 30px; } }
+  @media only screen and (min-width: 900px) {
+    h4 {
+      font-size: 35px;
+      line-height: 24px; } }
 
 .thumbnailImages {
   display: flex;
   flex-flow: row wrap;
-  padding: 10px 5%; }
+  justify-content: center;
+  transition: all 2s ease; }
+  @media only screen and (min-width: 600px) {
+    .thumbnailImages {
+      padding: 10px 5%; } }
+  @media only screen and (min-width: 900px) {
+    .thumbnailImages {
+      padding: 10px 15%; } }
 
 .eachPhotoContent {
-  margin: auto;
-  margin-bottom: 20px; }
+  padding-top: 10px;
+  margin: 10px 2px; }
 
 .uploadedPhoto {
-  height: 300px;
-  width: 300px;
   border-radius: 0px 0px 0px 0px;
   -moz-border-radius: 0px 0px 0px 0px;
   -webkit-border-radius: 0px 0px 0px 0px;
-  border: 6px double #AF9F98; }
+  border: 6px double #AF9F98;
+  justify-content: space-between;
+  height: 200px;
+  width: 350px; }
+  @media only screen and (min-width: 600px) {
+    .uploadedPhoto {
+      flex: 0 0 100%; } }
+  @media only screen and (min-width: 900px) {
+    .uploadedPhoto {
+      flex: 0 0 100%; } }
 
 div.inputTextName {
   font-family: "Poiret One";
   background-color: orange;
   font-size: 30px; }
 
-.singlePageContent {
-  display: flex;
-  flex-flow: row wrap;
-  margin: auto; }
+.singleBlock {
+  background-color: pink;
+  justify-content: center;
+  margin-left: 20px;
+  display: flex; }
 
 .singleImage {
-  margin: auto;
-  height: 70%;
-  width: 70%; }
-
-.singlePageDescription {
-  background-color: pink;
-  height: 70%;
-  margin: auto; }
+  height: 500px;
+  width: 750px; }
