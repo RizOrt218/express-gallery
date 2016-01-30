@@ -60,11 +60,16 @@ body {
   border-radius: 5px;
 }
 
-.buttonBar {
+.navBar {
   display: flex;
   flex-flow: row wrap;
   flex: 0 0 90%;
+  justify-content: space-between;
   // border: 1px solid brown;
+}
+
+.landingPageNav {
+  text-decoration: none;
 }
 
 .button {
@@ -87,6 +92,7 @@ body {
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
+  text-align: center;
   text-decoration: none;
   flex-grow: 1;
   margin: 10px;
@@ -104,6 +110,7 @@ body {
 .button.galleries {
   // border: 1px solid yellow;
   padding: 10px;
+  text-decoration: none;
 }
 
 
