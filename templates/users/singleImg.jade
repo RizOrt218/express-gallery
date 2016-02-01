@@ -5,9 +5,9 @@ html(lang="en")
     title
   body.singlePageWrapper
     div.mainPhotoWrapper
-      h1.textWrap Land_escapes
 
-      div.textWrap.singlePageText
+      div.textWrap
+        h1.textWrap Land_escapes
         h4 #{gallery.title}
         p.textLink #{gallery.link}
       img.singleImage(src='#{gallery.link}')
@@ -23,7 +23,7 @@ html(lang="en")
         form.homeButton(method="GET", action="/gallery")
           button(type="submit", value="submit") back
 
-      div.textWrap.singlePageText
+      div.textWrap
         p #{gallery.description}
 
       //- each photo in gallery
