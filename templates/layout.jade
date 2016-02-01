@@ -11,11 +11,11 @@ html(lang="en")
       div.mainPageButton
         //button to post new image
         form.layoutButton(method="GET", action="/gallery/new")
-          button(type="submit", value="submit") Post New
+          button.postButton(type="submit", value="submit") Post New
 
         //button to log out
         form.layoutButton(method="GET", action="/home")
-          button(type="submit", value="submit") Logout
+          button.logoutButton(type="submit", value="submit") Logout
 
       div.topPage
         img.mainImage(src='http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/07/9-Beautiful-HD-Wallpapers-0.jpg')

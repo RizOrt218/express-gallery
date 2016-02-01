@@ -12,16 +12,17 @@ html(lang="en")
         p.textLink #{gallery.link}
       img.singleImage(src='#{gallery.link}')
 
-      div.singlePageButtons
-        form.editButton(method="GET", action="/gallery/#{gallery.id}/edit")
-          button(type="submit", value="submit") edit
+      div.buttonBar
+        div.singlePageButtons
+          form(method="GET", action="/gallery/#{gallery.id}/edit")
+            button.editButton(type="submit", value="submit") edit
 
-        form.deleteButton(name="delete-photo", method="POST", action="/gallery")
-          input(type="hidden", name="_method", value="DELETE")
-          button(type="submit", value="submit") delete
+          form(name="delete-photo", method="POST", action="/gallery")
+            input(type="hidden", name="_method", value="DELETE")
+            button.deleteButton(type="submit", value="submit") delete
 
-        form.homeButton(method="GET", action="/gallery")
-          button(type="submit", value="submit") back
+          form(method="GET", action="/gallery")
+            button.backButton(type="submit", value="submit") back
 
       div.textWrap.singlePageText
         p #{gallery.description}
