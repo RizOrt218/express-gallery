@@ -69,8 +69,7 @@
 
 body {
   background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
-  background-size: cover;
-  transition: all 3s ease; }
+  background-size: cover; }
 
 .topbar {
   display: flex;
@@ -95,7 +94,6 @@ body {
   width: 90%; }
 
 .topPage {
-  background-color: pink;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center; }
@@ -112,13 +110,13 @@ body {
       padding: 5% 5% 5% 2%; } }
 
 .mainImage {
-  background-color: blue;
   margin: 5%;
   height: 1%;
   width: 90%;
   transition: all 1s ease; }
   @media only screen and (min-width: 600px) {
     .mainImage {
+      margin-top: 2%;
       margin-bottom: 2%;
       width: 40%; } }
 
@@ -132,7 +130,6 @@ h4 {
       line-height: 24px; } }
 
 .thumbnailImages {
-  background-color: blue;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -200,7 +197,6 @@ div.inputTextName {
   padding-bottom: 10px; }
 
 .singleImage {
-  background-color: yellow;
   box-shadow: 2px 2px 20px 2px #666666;
   border: solid white;
   margin: 0% 5% 0% 5%;
@@ -217,12 +213,14 @@ div.inputTextName {
   @media only screen and (min-width: 600px) {
     .thumbWrapper {
       display: block;
-      border-left: 1px solid gray;
       padding-top: 0px;
-      margin-top: 20px; } }
+      margin-top: 10%; } }
 
 @media only screen and (min-width: 600px) {
   .textWrap {
-    padding: 2%; }
+    padding: 5%; }
   .singlePageWrapper {
-    display: flex; } }
+    padding: 5%;
+    display: flex; }
+  .mainPhotoWrapper {
+    margin: 5% 0% 5% 5%; } }
