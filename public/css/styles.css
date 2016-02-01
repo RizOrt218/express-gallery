@@ -66,12 +66,8 @@
 
 body {
   background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  transition: all 3s ease;
-  background-repeat: no-repeat; }
+  transition: all 3s ease; }
 
 .topbar {
   display: flex;
@@ -79,86 +75,74 @@ body {
   justify-content: center; }
 
 .mainPageButton {
-  padding-left: 6%; }
+  display: flex;
+  padding-left: 5%; }
 
 .mainHeader {
   background-color: #9dcca6;
   opacity: 0.3;
   font-family: "Poiret One";
   font-size: 20px;
-  padding: 2%;
-  margin-bottom: 20px;
+  padding: 5%; }
+
+.wholeGalleryWrapper {
   box-shadow: 0px 5px 10px #666666;
-  transition: all 1s ease; }
+  background-color: white;
+  margin: auto;
+  width: 90%; }
 
 .topPage {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center; }
 
+.topParagraph {
+  display: none;
+  font-family: "Poiret One"; }
+  @media only screen and (min-width: 600px) {
+    .topParagraph {
+      flex: 0 1 100%;
+      display: block;
+      font-size: 15px;
+      line-height: 18px;
+      padding: 5% 5% 5% 2%; } }
+
 .mainImage {
-  height: 150px;
-  width: 375px;
-  padding-bottom: 10px;
-  border-bottom: solid 1px #2D530A;
+  height: 1%;
+  width: 90%;
+  padding: 5%;
   transition: all 1s ease; }
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 600px) {
     .mainImage {
-      height: 250px;
-      width: 650px;
-      padding: 10px;
-      font-size: 30px;
-      line-height: 21px; } }
-  @media only screen and (min-width: 800px) {
-    .mainImage {
-      height: 400px;
-      width: 1090px;
-      font-size: 35px;
-      line-height: 24px; } }
+      width: 40%; } }
 
 h4 {
   font-family: "Poiret One";
   font-size: 25px;
-  margin-bottom: 2px; }
-  @media only screen and (min-width: 500px) {
+  margin-bottom: 5px; }
+  @media only screen and (min-width: 600px) {
     h4 {
-      padding: 10px;
-      font-size: 30px; } }
-  @media only screen and (min-width: 800px) {
-    h4 {
-      font-size: 35px;
+      font-size: 30px;
       line-height: 24px; } }
 
 .thumbnailImages {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  transition: all 2s ease; }
-  @media only screen and (min-width: 500px) {
-    .thumbnailImages {
-      padding: 10px 5%; } }
-  @media only screen and (min-width: 800px) {
-    .thumbnailImages {
-      padding: 10px 15%; } }
+  justify-content: center; }
 
 .eachPhotoContent {
-  padding-top: 10px;
-  margin: 10px 2px; }
+  margin: 5px; }
 
 .uploadedPhoto {
+  margin-top: 2%;
   border-radius: 0px 0px 0px 0px;
-  -moz-border-radius: 0px 0px 0px 0px;
-  -webkit-border-radius: 0px 0px 0px 0px;
   border: 6px double #AF9F98;
-  justify-content: space-between;
-  height: 200px;
-  width: 350px; }
-  @media only screen and (min-width: 500px) {
+  height: 190px;
+  width: 94%; }
+  @media only screen and (min-width: 600px) {
     .uploadedPhoto {
-      flex: 0 0 100%; } }
-  @media only screen and (min-width: 800px) {
-    .uploadedPhoto {
-      flex: 0 0 100%; } }
+      justify-content: space-between;
+      width: 370px; } }
 
 .formWrapper {
   background: #9dcca6;
@@ -168,7 +152,7 @@ h4 {
   background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
   background-image: linear-gradient(to bottom, #9dcca6, #e1ede5); }
 
-.inputTextName {
+div.inputTextName {
   font-family: "Poiret One";
   font-size: 30px; }
 
@@ -196,12 +180,40 @@ h4 {
   flex-grow: 1;
   margin: 10px; }
 
-.singleBlock {
-  background-color: pink;
-  justify-content: center;
-  margin-left: 20px;
-  display: flex; }
+.textWrap {
+  font-family: "Poiret One";
+  word-wrap: break-word;
+  padding: 5%;
+  color: gray; }
+
+.textLink {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px; }
 
 .singleImage {
-  height: 500px;
-  width: 750px; }
+  background-color: yellow;
+  box-shadow: 2px 2px 20px 2px #666666;
+  border: solid white;
+  margin: 0% 5% 0% 5%;
+  height: 50%;
+  width: 90%; }
+
+.singlePageButtons {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-left: 5%; }
+
+.thumbWrapper {
+  display: none; }
+  @media only screen and (min-width: 600px) {
+    .thumbWrapper {
+      display: block;
+      border-left: 1px solid gray;
+      padding-top: 0px;
+      margin-top: 20px; } }
+
+@media only screen and (min-width: 600px) {
+  .textWrap {
+    padding: 2%; }
+  .singlePageWrapper {
+    display: flex; } }

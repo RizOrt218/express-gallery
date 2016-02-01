@@ -3,8 +3,9 @@
 }
 
 // MEDIA QUERY RANGES
-$medium: "only screen and (min-width:500px)";
-$large: "only screen and (min-width:800px)";
+
+$medium: "only screen and (min-width:400px)";
+$large: "only screen and (min-width:600px)";
 
 $colorVariable: #C1A385;
 
@@ -102,140 +103,96 @@ $poiret-one: 'Poiret One';
 //=========== STATIC PAGE ===============//
 body {
   background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   transition: all 3s ease;
-  background-repeat: no-repeat;
 }
 .topbar {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-
 .mainPageButton {
-  padding-left: 6%;
+  display: flex;
+  padding-left: 5%;
 }
-
 .mainHeader {
   background-color: #9dcca6;
   opacity: 0.3;
   font-family: $poiret-one;
   font-size: 20px;
-  padding: 2%;
-  margin-bottom: 20px;
+  padding: 5%;
+}
+.wholeGalleryWrapper {
   box-shadow: 0px 5px 10px #666666;
-  transition: all 1s ease;
+  background-color: white;
+  margin: auto;
+  width: 90%;
 }
 
-//========= ALL PHOTOS =============//
+//========= STATIC PHOTO =============//
 
 .topPage {
   display: flex;
-  flex-flow: row wrap;
-  // background-color: pink;
+  flex-flow: row nowrap;
   justify-content: center;
-}
 
+}
+.topParagraph {
+  display: none;
+  font-family: $poiret-one;
+
+  @media #{ $large } {
+    flex: 0 1 100%;
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 5% 5% 5% 2%;
+    // margin: 5% 0% 0% 2%;
+  }
+}
 .mainImage {
-  height: 150px;
-  width: 375px;
-  padding-bottom: 10px;
-  border-bottom: solid 1px #2D530A;
+  height: 1%;
+  width: 90%;
+  padding: 5%;
   transition: all 1s ease;
 
-  @media #{ $medium } {
-    height: 250px;
-    width: 650px;
-    padding: 10px;
-    font-size: 30px;
-    line-height: 21px;
-  }
   @media #{ $large } {
-    height: 400px;
-    width: 1090px;
-    font-size: 35px;
-    line-height: 24px;
-    // padding-bottom: 10px;
-    // padding-top: 10px;
+    width: 40%;
   }
 }
 
 //========= EACH PHOTO CONTENT =======
 
 h4 {
-  // background-color: blue;
   font-family: $poiret-one;
   font-size: 25px;
-  margin-bottom: 2px;
-
-  @media #{ $medium } {
-    padding: 10px;
-    font-size: 30px;
-    // line-height: 21px;
-  }
+  margin-bottom: 5px;
 
   @media #{ $large } {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 24px;
-    // padding-bottom: 10px;
-    // padding-top: 10px;
   }
 }
-
 .thumbnailImages {
-  // background-color: purple;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  transition: all 2s ease;
-
-  @media #{ $medium } {
-    padding: 10px 5%;
-  }
-
-  @media #{ $large } {
-    padding: 10px 15%;
-  }
 }
 .eachPhotoContent {
-  // background-color: orange;
-  padding-top: 10px;
-  margin: 10px 2px;
+  margin: 5px;
 }
 
 .uploadedPhoto {
-  // background-color: pink;
+  margin-top: 2%;
   border-radius: 0px 0px 0px 0px;
-  -moz-border-radius: 0px 0px 0px 0px;
-  -webkit-border-radius: 0px 0px 0px 0px;
   border: 6px double #AF9F98;
-  justify-content: space-between;
-  height: 200px;
-  width: 350px;
-
-  // flex: 0 0 100%;
-
-  @media #{ $medium } {
-    flex: 0 0 100%;
-    // height: 250px;
-    // width: 350px;
-  }
+  height: 190px;
+  width: 94%;
 
   @media #{ $large } {
-    flex: 0 0 100%;
-    // height: 250px;
-    // width: 370px;
+   justify-content: space-between;
+   width: 370px;
   }
-}
-
-.uploadedPhoto:hover {
-
-}
-.photoDescription {
-
 }
 
 //========= NEW FORM ==================//
@@ -249,6 +206,10 @@ h4 {
 }
 
 .inputTextName {
+
+}
+
+div.inputTextName {
   font-family: $poiret-one;
   font-size: 30px;
 }
@@ -280,35 +241,58 @@ h4 {
 
 //=== SINGLE PHOTO /gallery/:id ========//
 
-.singleBlock {
-  background-color: pink;
-  justify-content: center;
-  margin-left: 20px;
-  display: flex;
-  // flex-flow: row wrap;
+.textWrap {
+  font-family: $poiret-one;
+  word-wrap: break-word;
+  padding: 5%;
+  color: gray;
+  // background-color: pink;
 }
-// .singlePageContent {
-//   height: 500px;
-//   width: 750px;
-//   background-color: gray;
-//   // margin: auto;
-// }
-// .singlePageButtons {
-//   display: flex;
-//   flex-flow: row nowrap;
-//   background-color: purple;
-// }
+.textLink {
+  // background-color: blue;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+.singePageHead {
+  // background-color: yellow;
+}
 .singleImage {
-  height: 500px;
-  width: 750px;
+  background-color: yellow;
+  box-shadow: 2px 2px 20px 2px #666666;
+  border: solid white;
+  margin: 0% 5% 0% 5%;
+  height: 50%;
+  width: 90%;
+}
+.singlePageButtons {
+  // background-color: red;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-left: 5%;
+
+  .editButton {
+
+  }
+  .deleteButton {
+
+  }
+}
+.thumbWrapper {
+  display: none;
+
+  @media #{ $large } {
+    display: block;
+    border-left: 1px solid gray;
+    padding-top: 0px;
+    margin-top:20px;
+  }
 }
 
-// .singlePageDescription {
-//   background-color: pink;
-//   height: 70%;
-//   margin: auto;
-// }
-
-// .singlePageButtons {
-
-// }
+@media #{ $large } {
+  .textWrap {
+    padding: 2%;
+  }
+  .singlePageWrapper {
+    display: flex;
+  }
+}

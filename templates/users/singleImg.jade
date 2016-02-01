@@ -3,22 +3,36 @@ html(lang="en")
   head
     link(rel="stylesheet" href="./../css/styles.css")
     title
+  body.singlePageWrapper
+    div.mainPhotoWrapper
+      h1.textWrap Land_escapes
 
-  body
-    each photo in gallery
-      h4 #{photo.title}
+      div.textWrap.singlePageText
+        h4 #{gallery.title}
+        p.textLink #{gallery.link}
+      img.singleImage(src='#{gallery.link}')
 
-      div.singleBlock.singlePageButtons
-        form.editButton(method="GET", action="/gallery/#{photo.id}/edit")
+      div.singlePageButtons
+        form.editButton(method="GET", action="/gallery/#{gallery.id}/edit")
           button(type="submit", value="submit") edit
 
         form.deleteButton(name="delete-photo", method="POST", action="/gallery")
           input(type="hidden", name="_method", value="DELETE")
           button(type="submit", value="submit") delete
 
-      div.singleBlock
-        img.singleImage(src='#{photo.link}')
+        form.homeButton(method="GET", action="/gallery")
+          button(type="submit", value="submit") back
 
+      div.textWrap.singlePageText
+        p #{gallery.description}
 
-      div.singleBlock.singlePageDescription
-        p.description #{photo.description}
+      //- each photo in gallery
+    div.thumbWrapper
+      each thumb in thumbs
+        div.eachPhotoContent
+          //- h4 #{thumb.title}
+
+          //every photo that gets uploaded
+          //- a(href='/#{thumb.id}')
+          img.uploadedPhoto(src='#{thumb.link}')
+
