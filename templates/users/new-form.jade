@@ -4,17 +4,16 @@ html(lang="en")
     link(rel="stylesheet" href="./../css/styles.css")
     title
   body
-    form(name="new_photo", method="POST", action="/gallery")
-      input(type="hidden", name="_method", placeholder="POST")
-      div.inputTextName Author&nbsp
-        input(type="text", name="author", placeholder="..." autofocus)
-      div.inputTextName Title&nbsp
-        input(type="text", name="title", placeholder="..." autofocus)
-      div.inputTextName Link&nbsp
-        input(type="text", name="link", placeholder="...")
-      div.inputTextName Description&nbsp
-        input(type="text", name="description", placeholder="...")
-      div.submit
-        input(type="submit", value="Create New Post")
-
-
+    div.formWrapper
+      form(name="new_photo", method="POST", action="/gallery")
+        input(type="hidden", name="_method", placeholder="POST")
+        div.inputTextName Author&nbsp
+          input(type="text", name="author", placeholder="Enter Author" autofocus)
+        div.inputTextName Title&nbsp
+          input(type="text", name="title", placeholder="Enter Title" autofocus)
+        div.inputTextName Link&nbsp
+          input(type="text", name="link", placeholder="Enter URL")
+        div.inputTextName Description&nbsp
+          input(type="text", name="description", placeholder="Description of photo")
+        div
+          input.submitButton(type="submit" name="submit" value="Submit")
