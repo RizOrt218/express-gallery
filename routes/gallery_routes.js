@@ -17,19 +17,19 @@ router.route('/new')
     .then( function ( gallery ) {
       res.render('users/new-form');
     });
-  // })
-  // .post( function (req, res ) {
-  //   Gallery.create(
-  //     {
-  //       author: req.body.author,
-  //       title: req.body.title,
-  //       link: req.body.link,
-  //       description: req.body.description
-  //     }
-  //   )
-  //   .then( function ( ) {
-  //     res.redirect( '/gallery' );
-  //   });
+  })
+  .post( function (req, res ) {
+    Gallery.create(
+      {
+        author: req.body.author,
+        title: req.body.title,
+        link: req.body.link,
+        description: req.body.description
+      }
+    )
+    .then( function ( ) {
+      res.redirect( '/gallery' );
+    });
   });
 
 router.route('/')
@@ -67,15 +67,21 @@ router.route('/test')
 );
 
 router.route('/:id')
-  .get( function ( req, res ) {
-    Gallery.findAll({
-      where: {
-        id : req.params.id
-      }
-    })
-    .then( function ( singleImg ) {
-      res.render( 'users/singleImg', {
-        'gallery' : singleImg
+  .get( function (req, res) {
+  var main = null;
+  var thumbs = null;
+    Gallery.findAll()
+    .then( function (data) {
+      thumbs = data;
+      Gallery.findById(req.params.id)
+        .then(function (data) {
+          main = data;
+        })
+        .then(function (data) {
+        res.render( 'users/singleImg', {
+          gallery : main,
+          thumbs : thumbs
+        });
       });
     });
   })
