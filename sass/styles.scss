@@ -107,7 +107,6 @@ $poiret-one: 'Poiret One';
 body {
   background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
   background-size: cover;
-  transition: all 3s ease;
 }
 .topbar {
   display: flex;
@@ -128,7 +127,6 @@ body {
 .wholeGalleryWrapper {
   box-shadow: 0px 5px 10px #666666;
   background-color: white;
-  // padding: 5%;
   margin: auto;
   width: 90%;
 }
@@ -136,7 +134,6 @@ body {
 //========= STATIC PHOTO =============//
 
 .topPage {
-  background-color: pink;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -156,13 +153,13 @@ body {
   }
 }
 .mainImage {
-  background-color: blue;
   margin: 5%;
   height: 1%;
   width: 90%;
   transition: all 1s ease;
 
   @media #{ $large } {
+    margin-top: 2%;
     margin-bottom: 2%;
     width: 40%;
   }
@@ -181,7 +178,6 @@ h4 {
   }
 }
 .thumbnailImages {
-  background-color: blue;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -256,18 +252,13 @@ div.inputTextName {
   word-wrap: break-word;
   padding: 5%;
   color: gray;
-  // background-color: pink;
 }
 .textLink {
-  // background-color: blue;
   border-bottom: 1px solid gray;
   padding-bottom: 10px;
 }
-.singePageHead {
-  // background-color: yellow;
-}
+
 .singleImage {
-  background-color: yellow;
   box-shadow: 2px 2px 20px 2px #666666;
   border: solid white;
   margin: 0% 5% 0% 5%;
@@ -275,7 +266,6 @@ div.inputTextName {
   width: 90%;
 }
 .singlePageButtons {
-  // background-color: red;
   display: flex;
   flex-flow: row nowrap;
   padding-left: 5%;
@@ -292,17 +282,22 @@ div.inputTextName {
 
   @media #{ $large } {
     display: block;
-    border-left: 1px solid gray;
     padding-top: 0px;
-    margin-top:20px;
+    margin-top: 10%;
   }
 }
 
 @media #{ $large } {
   .textWrap {
-    padding: 2%;
+    padding: 5%;
   }
   .singlePageWrapper {
+    padding: 5%;
     display: flex;
   }
+  .mainPhotoWrapper {
+    // padding: 5% 0% 5% 5%;
+    margin: 5% 0% 5% 5%;
+  }
 }
+
