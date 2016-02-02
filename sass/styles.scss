@@ -1,6 +1,9 @@
 * {
   margin: 0px;
 }
+*{
+  box-sizing: border-box;
+}
 
 // MEDIA QUERY RANGES
 
@@ -104,7 +107,6 @@ $poiret-one: 'Poiret One';
 body {
   background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
   background-size: cover;
-  transition: all 3s ease;
 }
 
 .topbar {
@@ -213,12 +215,14 @@ body {
   }
 }
 .mainImage {
+  margin: 5%;
   height: 1%;
   width: 90%;
-  padding: 5%;
   transition: all 1s ease;
 
   @media #{ $large } {
+    margin-top: 2%;
+    margin-bottom: 2%;
     width: 40%;
   }
 }
@@ -239,6 +243,8 @@ h4 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .eachPhotoContent {
   margin: 5px;
@@ -249,11 +255,11 @@ h4 {
   border-radius: 0px 0px 0px 0px;
   border: 6px double #AF9F98;
   height: 190px;
-  width: 94%;
+  width: 100%;
 
   @media #{ $large } {
-   justify-content: space-between;
-   width: 370px;
+    justify-content: space-between;
+    width: 370px;
   }
 }
 
@@ -312,18 +318,13 @@ div.inputTextName {
   word-wrap: break-word;
   padding: 5%;
   color: gray;
-  // background-color: pink;
 }
 .textLink {
-  // background-color: blue;
   border-bottom: 1px solid gray;
   padding-bottom: 10px;
 }
-.singePageHead {
-  // background-color: yellow;
-}
+
 .singleImage {
-  background-color: yellow;
   box-shadow: 2px 2px 20px 2px #666666;
   border: solid white;
   margin: 0% 5% 0% 5%;
@@ -331,7 +332,6 @@ div.inputTextName {
   width: 90%;
 }
 .singlePageButtons {
-  // background-color: red;
   display: flex;
   flex-flow: row nowrap;
   padding-left: 5%;
@@ -436,17 +436,22 @@ div.inputTextName {
 
   @media #{ $large } {
     display: block;
-    border-left: 1px solid gray;
     padding-top: 0px;
-    margin-top:20px;
+    margin-top: 10%;
   }
 }
 
 @media #{ $large } {
   .textWrap {
-    padding: 2%;
+    padding: 5%;
   }
   .singlePageWrapper {
+    padding: 5%;
     display: flex;
   }
+  .mainPhotoWrapper {
+    // padding: 5% 0% 5% 5%;
+    margin: 5% 0% 5% 5%;
+  }
 }
+
