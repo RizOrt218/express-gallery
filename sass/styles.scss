@@ -121,8 +121,7 @@ body {
 }
 
 .mainHeader {
-  background-color: #9dcca6;
-  opacity: 0.3;
+  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
   font-family: $poiret-one;
   font-size: 20px;
   padding: 5%;
@@ -199,7 +198,6 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-
 }
 .topParagraph {
   display: none;
@@ -215,14 +213,13 @@ body {
   }
 }
 .mainImage {
-  margin: 5%;
+  margin: 2%;
   height: 1%;
   width: 90%;
   transition: all 1s ease;
 
   @media #{ $large } {
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 0% 5% 2% 5%;
     width: 40%;
   }
 }
