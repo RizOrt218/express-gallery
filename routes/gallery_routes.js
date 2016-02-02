@@ -15,7 +15,7 @@ router.route('/new')
   .get(function (req, res) {
     Gallery.findAll()
     .then( function ( gallery ) {
-      res.render('users/new-form');
+      res.render('gallery/new-form');
     });
   })
   .post( function (req, res ) {
@@ -36,7 +36,7 @@ router.route('/')
   .get( function ( req, res ) {
     Gallery.findAll()
       .then( function ( allPhotos ) {
-        res.render( 'users/allPhotos', {
+        res.render( 'gallery/allPhotos', {
           'gallery' : allPhotos,
         });
       });
@@ -78,7 +78,7 @@ router.route('/:id')
           main = data;
         })
         .then(function (data) {
-        res.render( 'users/singleImg', {
+        res.render( 'gallery/singleImg', {
           gallery : main,
           thumbs : thumbs
         });
