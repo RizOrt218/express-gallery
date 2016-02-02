@@ -5,8 +5,42 @@ var methodOverride = require('method-override');
 var bodyParser = require( 'body-parser' );
 var methodOverride = require('method-override');
 
+var passport = require( 'passport' );
+var session = require( 'express-session' );
+var LocalStrategy = require( 'passport-local' ).Strategy;
+var CONFIG = require( './config/config' );
+
 
 app.use( bodyParser.urlencoded ( { extended : true } ) );
+
+app.use( session( CONFIG.SESSION ) );
+
+app.use( passport.initialize() );
+
+app.use( passport.session() );
+
+passport.serializeUser( function ( user, done ) {
+  return done( null, user );
+});
+
+passport.deserializeUser( function ( user, done ) {
+  return done( null, user );
+});
+
+passport.use( new LocalStrategy(
+  function ( username, password, done ) {
+    var isAuthenticated = authenticate( username, password );
+
+    if( !isAuthenticated ) {
+      return done( null, false );
+    }
+    var user = {
+      name : "Bob",
+      role : "ADMIN"
+    };
+    return done ( null, user );
+  }
+));
 
 app.use(methodOverride(function(req,res){
   var method = req.body._method;
@@ -22,6 +56,7 @@ app.use(express.static('public'));
 app.use( '/users', userRoute );
 app.use( '/gallery', galleryRoute );
 app.use( '/home', landingPage );
+app.use( '/login', userRoute );
 
 app.set('view engine', 'jade');
 app.set('views', './templates');
