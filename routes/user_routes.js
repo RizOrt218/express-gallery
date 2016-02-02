@@ -11,7 +11,7 @@ var passport = require( 'passport' );
 
 router.use( bodyParser.urlencoded ( { extended : true } ) );
 
-router.route('/')
+router.route('/register')
   .get(function ( req, res ) {
     User.findAll()
       .then( function ( users ) {
@@ -19,7 +19,9 @@ router.route('/')
       });
   })
   .post(function (req, res ) {
-    User.create( {
+    //do varification if username exist &&
+    //passwerd matches
+    User.create({
       username: req.body.username,
       password: req.body.password
     })
@@ -32,7 +34,6 @@ router.route( '/login' )
   .get( function ( req, res ) {
     res.render( './login/login' );
   })
-
   .post(
     passport.authenticate('local', {
       successRedirect : '/gallery',
@@ -40,5 +41,17 @@ router.route( '/login' )
     })
   );
 
+  router.get('/logout', function (req, res) {
+    req.logout();
+    res.render('login');
+  });
+
+function authenticate (username, password) {
+  var CREDENTIALS = CONFIG.CREDENTIALS;
+  var USERNAME = CREDENTIALS.USERNAME;
+  var PASSWORD = CREDENTIALS.PASSWORD;
+
+  return (username === USERNAME && password === PASSWORD);
+}
 
 module.exports = router;

@@ -56,7 +56,7 @@ app.use(express.static('public'));
 app.use( '/users', userRoute );
 app.use( '/gallery', galleryRoute );
 app.use( '/home', landingPage );
-app.use( '/login', userRoute );
+// app.use( '/', userRoute );
 
 app.set('view engine', 'jade');
 app.set('views', './templates');
