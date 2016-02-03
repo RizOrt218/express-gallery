@@ -62,22 +62,16 @@ router.route('/test')
   }
 );
 
-var main = null;
-var thumbs = null;
-
 router.route('/:id')
   .get( function (req, res) {
     Gallery.findAll()
-    .then( function (data) {
-      thumbs = data;
+    .then( function (allPhotos) {
+      var thumbs = allPhotos;
       Gallery.findById(req.params.id)
-        .then(function (data) {
-          console.log(data);
-          main = data;
-        })
-        .then(function (data) {
+        .then(function (featuredPhoto) {
           res.render( 'gallery/singleImg', {
-            gallery : main,
+            user : req.user,
+            gallery : featuredPhoto,
             thumbs : thumbs
           });
       });
