@@ -13,7 +13,7 @@ html(lang="en")
       img.singleImage(src='#{gallery.link}')
 
       div.buttonBar
-        if '#{user.id}' === '#{gallery.UserId}'
+        if user.id === gallery.UserId
           div.singlePageButtons
             form(method="GET", action="/gallery/#{gallery.id}/edit")
               button.editButton(type="submit", value="submit") edit
@@ -34,6 +34,6 @@ html(lang="en")
         div.eachPhotoContent
           //- h4 #{thumb.title}
 
-          //every photo that gets uploaded
+          //- every photo that gets uploaded
           //- a(href='/#{thumb.id}')
           img.uploadedPhoto(src='#{thumb.link}')
