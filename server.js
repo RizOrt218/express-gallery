@@ -36,12 +36,16 @@ passport.use( new LocalStrategy(
         username : username
       }
   })
-    .then(function ( user ) {
-      console.log(user);
-      if( user ) {
-        return done( null, user );
+    .then(function ( user, err ) {
+      if( err ) {
+        throw err;
       }
-      return done ( null, false );
+      else if( user ) {
+        return done( null, user);
+      }
+      else {
+        return done( null, false );
+      }
     });
   }
 ));
