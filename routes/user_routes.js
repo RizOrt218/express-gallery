@@ -44,7 +44,7 @@ router.route( '/login' )
 
   router.get('/logout', function (req, res) {
     req.logout();
-    res.render('login/login');
+    res.redirect('/home');
   });
 
 function isAuthenticated ( req, res, next ) {
