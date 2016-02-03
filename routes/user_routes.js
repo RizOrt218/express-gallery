@@ -1,13 +1,13 @@
-var express = require( 'express' );
-var router = express.Router();
+var express   = require( 'express' );
+var router    = express.Router();
 
-var db = require( './../models' );
-var User = db.User;
+var db        = require( './../models' );
+var User      = db.User;
 
-var bodyParser = require( 'body-parser' );
+var bodyParser= require( 'body-parser' );
 
-var passport = require( 'passport' );
-var CONFIG = require( '../config/config' );
+var passport  = require( 'passport' );
+var CONFIG    = require( '../config/config' );
 
 
 router.use( bodyParser.urlencoded ( { extended : true } ) );

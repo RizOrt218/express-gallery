@@ -1,7 +1,7 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var connect = require('gulp-connect');
-var nodemon = require('gulp-nodemon');
+var gulp   = require('gulp');
+var sass   = require('gulp-sass');
+var connect= require('gulp-connect');
+var nodemon= require('gulp-nodemon');
 
 gulp.task('start', function () {
   nodemon({

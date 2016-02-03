@@ -1,14 +1,15 @@
-var express = require( 'express' );
-var app = express();
-var db = require( './models' );
+var express        = require( 'express' );
+var flash          = require('connect-flash');
+var app            = express();
+var db             = require( './models' );
 var methodOverride = require('method-override');
-var bodyParser = require( 'body-parser' );
+var bodyParser     = require( 'body-parser' );
 var methodOverride = require('method-override');
 
-var passport = require( 'passport' );
-var session = require( 'express-session' );
-var LocalStrategy = require( 'passport-local' ).Strategy;
-var CONFIG = require( './config/config' );
+var passport       = require( 'passport' );
+var session        = require( 'express-session' );
+var LocalStrategy  = require( 'passport-local' ).Strategy;
+var CONFIG         = require( './config/config' );
 
 
 app.use( bodyParser.urlencoded ( { extended : true } ) );
