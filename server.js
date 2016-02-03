@@ -27,18 +27,22 @@ passport.deserializeUser( function ( user, done ) {
   return done( null, user );
 });
 
+var isAuthenticated = false;
+
 passport.use( new LocalStrategy(
   function ( username, password, done ) {
-    var isAuthenticated = authenticate( username, password );
-
-    if( !isAuthenticated ) {
-      return done( null, false );
-    }
-    var user = {
-      name : "Bob",
-      role : "ADMIN"
-    };
-    return done ( null, user );
+    db.User.findOne({
+      where : {
+        username : username
+      }
+  })
+    .then(function ( user ) {
+      console.log(user);
+      if( user ) {
+        return done( null, user );
+      }
+      return done ( null, false );
+    });
   }
 ));
 
