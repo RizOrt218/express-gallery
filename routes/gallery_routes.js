@@ -111,7 +111,6 @@ router.route('/:id')
     });
   });
 
-
 router.route('/:id/edit')
   .get( function ( req, res ) {
     Gallery.findAll({
