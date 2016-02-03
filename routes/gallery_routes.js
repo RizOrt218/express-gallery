@@ -47,7 +47,8 @@ router.route('/')
         author: req.body.author,
         title: req.body.title,
         link: req.body.link,
-        description: req.body.description
+        description: req.body.description,
+        UserId : req.user.id
       }
     )
     .then( function ( gallery ) {
