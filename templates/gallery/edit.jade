@@ -1,12 +1,19 @@
-form(action="/#{gallery.id}" method="POST" enctype="application/x-www-form-urlencoded")
-  input(type="hidden" name="_method" value="PUT")
-  span Author &nbsp
-  input(type="text" value="#{gallery.author}" name="author")
-  br
-  span Link &nbsp
-  input(type='text' value="#{gallery.link}" name="link")
-  br
-  span Description &nbsp
-  input(type='text' value="#{gallery.description}" name="description")
-  br
-  input(type='submit' value="submit")
+doctype html
+html(lang="en")
+  head
+    link(rel="stylesheet" href="/css/styles.css")
+    title
+  body
+    div.formWrapper
+      form(action="/gallery/#{gallery.id}", method="POST")
+        input(type="hidden" name="_method" value="PUT")
+        div.inputTextName Author &nbsp
+          input(type="text" value="#{gallery.author}" name="author")
+        div.inputTextName Title&nbsp
+          input(type="text", name="title", value="#{gallery.title}" autofocus)
+        div.inputTextName Link &nbsp
+          input(type='text' value="#{gallery.link}" name="link")
+        div.inputTextName Description &nbsp
+          input.inputTextName(type='text' value="#{gallery.description}" name="description")
+        div
+          input.submitButton(type='submit' value="submit")
