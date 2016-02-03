@@ -33,7 +33,7 @@ router.route('/new')
   });
 
 router.route('/')
-  .get( function ( req, res ) {
+  .get(isAuthenticated, function ( req, res ) {
     Gallery.findAll()
       .then( function ( allPhotos ) {
         res.render( 'gallery/allPhotos', {
@@ -126,6 +126,11 @@ router.route('/:id/edit')
     });
 });
 
-
+function isAuthenticated ( req, res, next ) {
+  if( !req.isAuthenticated() ) {
+    return res.redirect( '/users/login' );
+  }
+  return next();
+}
 
 module.exports = router;

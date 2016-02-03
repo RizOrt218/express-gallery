@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  link(rel="stylesheet" href="./../css/styles.css")
+  title Login
+body
+  form(method="POST" action="/users/register")
+    div.inputTextName Username&nbsp
+      input(type="text" name="username")
+    div.inputTextName Password&nbsp&nbsp
+      input(type="password" name="password")
+    button.editButton(type="submit") Register
