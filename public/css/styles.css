@@ -79,7 +79,7 @@ body {
 .mainPageButton {
   display: flex;
   padding-left: 3%;
-  margin-bottom: -12px;
+  margin-bottom: -9px;
   border-top: 10px solid #666666; }
   @media only screen and (min-width: 600px) {
     .mainPageButton {
@@ -88,6 +88,10 @@ body {
 
 .logoutForm {
   margin-left: -15px; }
+
+.textStyle {
+  text-shadow: 1px 3px 5px #666666;
+  font-family: "Poiret One"; }
 
 .mainHeader {
   background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
@@ -160,35 +164,37 @@ body {
   width: 100%;
   transition: all 1s ease; }
 
-h4 {
-  font-family: "Poiret One";
-  font-size: 25px;
-  margin-bottom: 5px; }
+.photoTitle {
+  font-size: 30px;
+  color: #666666; }
   @media only screen and (min-width: 600px) {
-    h4 {
-      font-size: 30px;
-      line-height: 24px; } }
+    .photoTitle {
+      font-size: 25px; } }
 
-.thumbnailImages {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-left: 5%;
-  margin-right: 5%; }
+@media only screen and (min-width: 600px) {
+  .thumbnailImages {
+    margin: 0% 5% 5% 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; } }
 
-.eachPhotoContent {
-  margin: 5px; }
+@media only screen and (min-width: 600px) {
+  .titlePhotoDiv {
+    flex-flow: row wrap;
+    margin-top: 10px;
+    padding: 2%; } }
 
 .uploadedPhoto {
   margin-top: 2%;
-  border-radius: 0px 0px 0px 0px;
-  border: 6px double #AF9F98;
-  height: 190px;
+  border: 5px double #666666;
   width: 100%; }
   @media only screen and (min-width: 600px) {
     .uploadedPhoto {
-      justify-content: space-between;
-      width: 370px; } }
+      height: 220px;
+      width: 320px; } }
+
+.uploadedPhoto:hover {
+  border: 8px double #9dcca6; }
 
 .formWrapper {
   background: #9dcca6;

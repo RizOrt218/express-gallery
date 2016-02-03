@@ -2,15 +2,15 @@ extends ./../layout
 
 
 block content
-  div.thumbnailImages
+  .thumbnailImages
     each photo in gallery
+      .titlePhotoDiv
+        .photoTitle.textStyle
+          h4 #{photo.title}
 
-      div.block.eachPhotoContent
-        h4 #{photo.title}
-
-        //every photo that gets uploaded
+        //- .eachPhoto
         a(href='gallery/#{photo.id}')
-          img.uploadedPhoto(src='#{photo.link}')
+        img.uploadedPhoto(src='#{photo.link}')
 
         //- div.photoDescription
           p #{photo.description}

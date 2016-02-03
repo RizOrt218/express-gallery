@@ -119,7 +119,7 @@ body {
   // background-color: blue;
   display: flex;
   padding-left: 3%;
-  margin-bottom: -12px;
+  margin-bottom: -9px;
   border-top: 10px solid #666666;
 
   @media #{ $large } {
@@ -131,6 +131,10 @@ body {
 .logoutForm {
   margin-left: -15px;
 }
+.textStyle {
+  text-shadow: 1px 3px 5px #666666;
+  font-family: $poiret-one;
+}
 .mainHeader {
   background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
   font-family: $poiret-one;
@@ -141,7 +145,6 @@ body {
   padding: 5%;
 }
 .wholeGalleryWrapper {
-  // background-color: pink;
   box-shadow: 0px 5px 10px #666666;
   background-color: white;
   margin: auto;
@@ -183,19 +186,14 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  // background-color: blue;
-  // border: 4px solid black;
 
   @media #{ $large } {
 
   }
 }
 .pLayout {
-  // border: 2px solid purple;
-  // background-color: pink;
   display: none;
   font-family: $poiret-one;
-  // border: 2px solid white;
 
   @media #{ $large } {
     text-align: justify;
@@ -209,7 +207,6 @@ body {
 }
 .imgDiv {
   transition: all 1s ease;
-  // background-color: brown;
 
   @media #{ $large } {
     padding: 0% 3% 2% 5%;
@@ -219,50 +216,55 @@ body {
 .mainImage {
   width: 100%;
   transition: all 1s ease;
-  // background-color: purple;
-  // border: 2px solid yellow;
-
-  @media #{ $large } {
-    // margin: 0% 5% 2% 5%;
-    // width: 40%;
-  }
 }
 
 //========= EACH PHOTO CONTENT =======
 
-h4 {
-  font-family: $poiret-one;
-  font-size: 25px;
-  margin-bottom: 5px;
+.photoTitle {
+  font-size: 30px;
+  color: #666666;
 
   @media #{ $large } {
-    font-size: 30px;
-    line-height: 24px;
+    font-size: 25px;
   }
 }
-.thumbnailImages {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.eachPhotoContent {
-  margin: 5px;
-}
 
+.thumbnailImages {
+  // background-color: pink;
+  // margin: 5% 5% 2% 5%;
+
+  @media #{ $large } {
+    margin: 0% 5% 5% 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+.titlePhotoDiv {
+
+  @media #{ $large } {
+    flex-flow: row wrap;
+    margin-top: 10px;
+    padding: 2%;
+    // border: 1px solid black;
+    // background-color: pink;
+    // width: 100%;
+  }
+}
 .uploadedPhoto {
   margin-top: 2%;
-  border-radius: 0px 0px 0px 0px;
-  border: 6px double #AF9F98;
-  height: 190px;
+  border: 5px double #666666;
   width: 100%;
 
   @media #{ $large } {
-    justify-content: space-between;
-    width: 370px;
+    height: 220px;
+    width: 320px;
   }
 }
+.uploadedPhoto:hover {
+  border: 8px double #9dcca6;
+}
+
 
 //========= NEW FORM ==================//
 .formWrapper {
