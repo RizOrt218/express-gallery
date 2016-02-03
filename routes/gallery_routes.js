@@ -12,7 +12,7 @@ router.use( bodyParser.urlencoded ( { extended : true } ) );
 //the gallery.
 //users/new-form
 router.route('/new')
-  .get(function (req, res) {
+  .get( isAuthenticated, function (req, res) {
     Gallery.findAll()
     .then( function ( gallery ) {
       res.render('gallery/new-form');
@@ -33,7 +33,7 @@ router.route('/new')
   });
 
 router.route('/')
-  .get(isAuthenticated, function ( req, res ) {
+  .get( function ( req, res ) {
     Gallery.findAll()
       .then( function ( allPhotos ) {
         res.render( 'gallery/allPhotos', {
@@ -56,21 +56,17 @@ router.route('/')
     });
 });
 
-router.route('/new')
-  .get( function ( req, res ) {
-
-  });
-
 router.route('/test')
   .get( function (req, res ) {
     res.render( 'test_landing_page' );
   }
 );
 
+var main = null;
+var thumbs = null;
+
 router.route('/:id')
   .get( function (req, res) {
-  var main = null;
-  var thumbs = null;
     Gallery.findAll()
     .then( function (data) {
       thumbs = data;
@@ -98,10 +94,11 @@ router.route('/:id')
       }
     })
     .then( function ( gallery ) {
-      res.redirect( '/gallery' );
+      res.redirect( '/gallery/' + req.params.id );
     });
   })
-  .delete( function ( req, res ) {
+
+  .delete( isAuthenticated, function ( req, res ) {
     Gallery.destroy({
       where : {
         id : req.params.id
@@ -114,7 +111,7 @@ router.route('/:id')
 
 
 router.route('/:id/edit')
-  .get( function ( req, res ) {
+  .get( isAuthenticated, function ( req, res ) {
     Gallery.findAll({
       where: {
         id : req.params.id
@@ -133,5 +130,6 @@ function isAuthenticated ( req, res, next ) {
   }
   return next();
 }
+
 
 module.exports = router;
