@@ -136,26 +136,29 @@ body {
   flex-flow: row nowrap;
   justify-content: center; }
 
-.topParagraph {
+.pLayout {
   display: none;
   font-family: "Poiret One"; }
   @media only screen and (min-width: 600px) {
-    .topParagraph {
-      flex: 0 1 100%;
+    .pLayout {
+      text-align: justify;
+      padding: 3% 6% 3% 3%;
+      width: 50%;
       display: block;
-      font-size: 15px;
-      line-height: 18px;
-      padding: 5% 5% 5% 2%; } }
+      color: #666666;
+      font-size: 18px;
+      line-height: 19px; } }
 
-.mainImage {
-  margin: 2%;
-  height: 1%;
-  width: 90%;
+.imgDiv {
   transition: all 1s ease; }
   @media only screen and (min-width: 600px) {
-    .mainImage {
-      margin: 0% 5% 2% 5%;
-      width: 40%; } }
+    .imgDiv {
+      padding: 0% 3% 2% 5%;
+      width: 50%; } }
+
+.mainImage {
+  width: 100%;
+  transition: all 1s ease; }
 
 h4 {
   font-family: "Poiret One";
