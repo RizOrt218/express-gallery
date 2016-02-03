@@ -90,6 +90,8 @@ body {
   margin-left: -15px; }
 
 .textStyle {
+  color: #666666;
+  word-wrap: break-word;
   text-shadow: 1px 3px 5px #666666;
   font-family: "Poiret One"; }
 
@@ -106,6 +108,7 @@ body {
   box-shadow: 0px 5px 10px #666666;
   background-color: white;
   margin: auto;
+  padding-bottom: 7%;
   width: 90%; }
 
 .postLogButton {
@@ -235,31 +238,37 @@ div.inputTextName {
 .submitButton:hover {
   color: #9dcca6; }
 
-.textWrap {
-  font-family: "Poiret One";
-  word-wrap: break-word;
-  padding: 5%;
-  color: gray; }
-
 .textLink {
+  font-size: 16px;
   border-bottom: 1px solid gray;
-  padding-bottom: 10px; }
+  border-top: 1px solid gray;
+  padding-bottom: 2%;
+  margin-bottom: 5%;
+  padding-top: 2%;
+  margin-top: 2%; }
 
 .singleImage {
   box-shadow: 2px 2px 20px 2px #666666;
   border: solid white;
-  margin: 0% 5% 0% 5%;
-  height: 50%;
-  width: 90%; }
+  width: 100%; }
 
 .singlePageButtons {
+  background-color: blue;
   display: flex;
   flex-flow: row nowrap;
-  padding-left: 5%; }
+  padding: 5%; }
+
+.singlePhotoPar {
+  box-shadow: 0px 5px 10px #666666;
+  text-align: justify;
+  font-family: "Poiret One";
+  padding: 5%;
+  background-color: white;
+  padding-top: 5%;
+  font-size: 18px; }
 
 .buttonBar {
-  display: flex;
-  flex-flow: row wrap; }
+  background-color: green; }
 
 .editButton {
   height: 30px;
@@ -343,15 +352,21 @@ div.inputTextName {
   display: none; }
   @media only screen and (min-width: 600px) {
     .thumbWrapper {
+      background-color: green;
       display: block;
       padding-top: 0px;
       margin-top: 10%; } }
+
+.mainPhotoWrapper {
+  background-color: pink;
+  padding-right: 5%;
+  padding-left: 5%; }
 
 @media only screen and (min-width: 600px) {
   .textWrap {
     padding: 5%; }
   .singlePageWrapper {
-    padding: 5%;
+    border: 3px solid black;
     display: flex; }
   .mainPhotoWrapper {
     margin: 5% 0% 5% 5%; } }
