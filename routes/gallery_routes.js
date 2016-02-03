@@ -72,13 +72,14 @@ router.route('/:id')
       thumbs = data;
       Gallery.findById(req.params.id)
         .then(function (data) {
+          console.log(data);
           main = data;
         })
         .then(function (data) {
-        res.render( 'gallery/singleImg', {
-          gallery : main,
-          thumbs : thumbs
-        });
+          res.render( 'gallery/singleImg', {
+            gallery : main,
+            thumbs : thumbs
+          });
       });
     });
   })
