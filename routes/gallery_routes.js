@@ -1,10 +1,10 @@
-var express = require( 'express' );
-var router = express.Router();
+var express   = require( 'express' );
+var router    = express.Router();
 
-var db = require( './../models' );
-var Gallery = db.Gallery;
+var db        = require( './../models' );
+var Gallery   = db.Gallery;
 
-var bodyParser = require( 'body-parser' );
+var bodyParser= require( 'body-parser' );
 
 router.use( bodyParser.urlencoded ( { extended : true } ) );
 

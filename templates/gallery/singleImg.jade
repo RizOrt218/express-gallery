@@ -3,18 +3,22 @@ html(lang="en")
   head
     link(rel="stylesheet" href="./../css/styles.css")
     title
-  body.singlePageWrapper
-    div.mainPhotoWrapper
-      h1.textWrap Land_escapes
+  body
+    .singlePageWrapper.wholeGalleryWrapper
+      .mainHeader
+        h1 HEADER
 
-      div.textWrap
-        h4 #{gallery.title}
-        p.textLink #{gallery.link}
-      img.singleImage(src='#{gallery.link}')
+      .mainPhotoWrapper
+        .photoTitle.textStyle
+          h4 #{gallery.title}
+          .textLink
+            p #{gallery.link}
+        img.singleImage(src='#{gallery.link}')
 
-      div.buttonBar
+      .buttonBar
         if user.id === gallery.UserId
-          div.singlePageButtons
+          .singlePageButtons
+
             form(method="GET", action="/gallery/#{gallery.id}/edit")
               button.editButton(type="submit", value="submit") edit
 
@@ -25,15 +29,17 @@ html(lang="en")
         form(method="GET", action="/gallery")
           button.backButton(type="submit", value="submit") back
 
-      div.textWrap
-        p #{gallery.description}
 
-      //- each photo in gallery
-    div.thumbWrapper
-      each thumb in thumbs
-        div.eachPhotoContent
-          //- h4 #{thumb.title}
+        .singlePhotoPar
+          p #{gallery.description}
 
-          //- every photo that gets uploaded
-          //- a(href='/#{thumb.id}')
-          img.uploadedPhoto(src='#{thumb.link}')
+        //- each photo in gallery
+
+      .thumbWrapper
+        each thumb in thumbs
+          .eachPhotoContent
+            //- h4 #{thumb.title}
+
+            //every photo that gets uploaded
+            //- a(href='/#{thumb.id}')
+            img.uploadedPhoto(src='#{thumb.link}')
