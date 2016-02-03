@@ -23,12 +23,12 @@ router.route('/register')
       username: req.body.username,
       password: req.body.password
     })
-      .then( function ( user, err ) {
-        if (err) {
-          console.log('err');
-        }
-        res.render( 'login/login' );
-      });
+    .then( function ( user ) {
+      res.redirect( '/users/login' );
+    })
+    .error( function ( errors ) {
+      res.render( 'register', errors );
+    });
   });
 
 router.route( '/login' )
