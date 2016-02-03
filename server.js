@@ -14,10 +14,13 @@ var CONFIG         = require( './config/config' );
 
 app.use( bodyParser.urlencoded ( { extended : true } ) );
 
+//configures for connect-flash === grabbed it from npm examples
+// app.use(express.cookieParser('keyboard cat'));
+// app.use(express.session({ cookie: { maxAge: 60000 }}));
+// app.use(flash());
+
 app.use( session( CONFIG.SESSION ) );
-
 app.use( passport.initialize() );
-
 app.use( passport.session() );
 
 passport.serializeUser( function ( user, done ) {
@@ -36,7 +39,7 @@ passport.use( new LocalStrategy(
       where : {
         username : username
       }
-  })
+    })
     .then(function ( user, err ) {
       if( err ) {
         throw err;
@@ -57,8 +60,8 @@ app.use(methodOverride(function(req,res){
   return method;
 }));
 
-var userRoute = require( './routes/user_routes' );
-var galleryRoute = require( './routes/gallery_routes.js' );
+var userRoute   = require( './routes/user_routes' );
+var galleryRoute= require( './routes/gallery_routes.js' );
 var landingPage = require( './routes/landing_page.js' );
 
 app.use(express.static('public'));

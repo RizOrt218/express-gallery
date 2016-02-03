@@ -4,23 +4,21 @@ html(lang="en")
     link(rel="stylesheet" href="/css/styles.css")
     title
   body
-    div.wholeGalleryWrapper
-      div.mainHeader
-        h1 Land_escapes
+    .wholeGalleryWrapper
+      .mainHeader
+        h1 HEADER
 
-      div.mainPageButton
-        //button to post new image
-        form.layoutButton(method="GET", action="/gallery/new")
-          button.postButton(type="submit", value="submit") Post New
+      .mainPageButton
+        form.postForm(method="GET", action="/gallery/new")
+          button.postLogButton(type="submit", value="submit") Post New
 
-        //button to log out
-        form.layoutButton(method="GET", action="/users/logout")
-          button.logoutButton(type="submit", value="submit") Logout
+        form.logoutForm(method="GET", action="/users/logout")
+          button.postLogButton(type="submit", value="submit") Logout
 
-      div.topPage
+      .topPage
         img.mainImage(src='http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/07/9-Beautiful-HD-Wallpapers-0.jpg')
+        .pLayout
+          p.topParagraph Pommy ipsum yorkshire mixture chips some mothers do 'ave 'em knee high to a grasshopper i'll be a monkey's uncle wellies, red telephone box indeed gobsmacked it's cracking flags. pot noodle a bottle of plonk good old fashioned knees up. Blimey Victoria sponge cake numbskull have a kip blighty Southeners numbskull skive every fortnight well fit collywobbles, gosh anorak munta penny-dreadful throw a spanner in the works supper it's the bees knees twiglets. Bit of alright cup of tea River Song trouble and strife The Hounds of Baskerville devonshire cream tea shortbread what a load of cobblers, ey up duck bull dog quid Big Ben driving a mini. It's me peepers oopsy-daisies sorted it, ey up chuck.
 
-        p.topParagraph Pommy ipsum yorkshire mixture chips some mothers do 'ave 'em knee high to a grasshopper i'll be a monkey's uncle wellies, red telephone box indeed gobsmacked it's cracking flags. pot noodle a bottle of plonk good old fashioned knees up. Blimey Victoria sponge cake numbskull have a kip blighty Southeners numbskull skive every fortnight well fit collywobbles, gosh anorak munta penny-dreadful throw a spanner in the works supper it's the bees knees twiglets. Bit of alright cup of tea River Song trouble and strife The Hounds of Baskerville devonshire cream tea shortbread what a load of cobblers, ey up duck bull dog quid Big Ben driving a mini. It's me peepers oopsy-daisies sorted it, ey up chuck.
-
-      div.block
+      .block
         block content
