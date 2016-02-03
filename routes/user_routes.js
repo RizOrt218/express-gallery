@@ -7,17 +7,15 @@ var User = db.User;
 var bodyParser = require( 'body-parser' );
 
 var passport = require( 'passport' );
+var CONFIG = require( '../config/config' );
 
 
 router.use( bodyParser.urlencoded ( { extended : true } ) );
 
 router.route('/register')
   .get(function ( req, res ) {
-    User.findAll()
-      .then( function ( users ) {
-        res.json( users );
-      });
-  })
+        res.render( 'register' );
+    })
   .post(function (req, res ) {
     //do varification if username exist &&
     //passwerd matches
@@ -25,33 +23,36 @@ router.route('/register')
       username: req.body.username,
       password: req.body.password
     })
-      .then( function ( user ) {
-        res.json( user );
+      .then( function ( user, err ) {
+        if (err) {
+          console.log('err');
+        }
+        res.render( 'login/login' );
       });
   });
 
 router.route( '/login' )
   .get( function ( req, res ) {
-    res.render( './login/login' );
+    res.render( 'login/login' );
   })
   .post(
     passport.authenticate('local', {
       successRedirect : '/gallery',
-      failureRedirect : '/login'
+      failureRedirect : '/users/login'
     })
   );
 
   router.get('/logout', function (req, res) {
     req.logout();
-    res.render('login');
+    res.render('login/login');
   });
 
-function authenticate (username, password) {
-  var CREDENTIALS = CONFIG.CREDENTIALS;
-  var USERNAME = CREDENTIALS.USERNAME;
-  var PASSWORD = CREDENTIALS.PASSWORD;
-
-  return (username === USERNAME && password === PASSWORD);
+function isAuthenticated ( req, res, next ) {
+  if( !req.isAuthenticated() ) {
+    return res.redirect( 'login' );
+  }
+  return next();
 }
+
 
 module.exports = router;
