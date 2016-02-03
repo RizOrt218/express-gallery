@@ -109,7 +109,6 @@ router.route('/:id')
     });
   });
 
-
 router.route('/:id/edit')
   .get( isAuthenticated, function ( req, res ) {
     Gallery.findAll({
