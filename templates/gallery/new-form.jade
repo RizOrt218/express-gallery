@@ -7,9 +7,7 @@ html(lang="en")
     .formWrapper
       form(name="new_photo", method="POST", action="/gallery")
         input(type="hidden", name="_method", placeholder="POST")
-        .inputTextName Author&nbsp
-          input(type="text", name="author", placeholder="Enter Author" autofocus)
-        .inputTextName Title&nbsp
+        div.inputTextName Title&nbsp
           input(type="text", name="title", placeholder="Enter Title" autofocus)
         .inputTextName Link&nbsp
           input(type="text", name="link", placeholder="Enter URL")
