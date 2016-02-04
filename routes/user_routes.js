@@ -8,9 +8,10 @@ var bodyParser= require( 'body-parser' );
 
 var passport  = require( 'passport' );
 var CONFIG    = require( '../config/config' );
-
+var bcrypt    = require('bcrypt');
 
 router.use( bodyParser.urlencoded ( { extended : true } ) );
+
 
 router.route('/register')
   .get(function ( req, res ) {
@@ -19,11 +20,15 @@ router.route('/register')
   .post(function (req, res ) {
     //do varification if username exist &&
     //passwerd matches
+    var salt = bcrypt.genSaltSync(10);
+    var hash = bcrypt.hashSync(req.body.password, salt);
+
     User.create({
       username: req.body.username,
-      password: req.body.password
+      password: hash
     })
     .then( function ( user ) {
+      console.log("hashpassword", hash);
       res.redirect( '/users/login' );
     })
     .error( function ( errors ) {

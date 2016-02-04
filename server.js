@@ -10,8 +10,7 @@ var passport       = require( 'passport' );
 var session        = require( 'express-session' );
 var LocalStrategy  = require( 'passport-local' ).Strategy;
 var CONFIG         = require( './config/config' );
-
-
+var bcrypt         = require('bcrypt');
 app.use( bodyParser.urlencoded ( { extended : true } ) );
 
 //configures for connect-flash === grabbed it from npm examples
@@ -35,22 +34,23 @@ passport.deserializeUser( function ( user, done ) {
 
 passport.use( new LocalStrategy(
   function ( username, password, done ) {
+    // console.log("password", hashPass);
     db.User.findOne({
       where : {
-        username : username,
-        password : password
+        username : username
       }
     })
     .then(function ( user, err ) {
-      if( err ) {
-        throw err;
-      }
-      else if( user ) {
-        return done( null, user);
-      }
-      else {
-        return done( null, false );
-      }
+      bcrypt.compare( password, user.password , function (err, res) {
+
+        if( err ) {
+          throw err;
+        } else if( res === true ) {
+          return done( null, user);
+        } else {
+          return done( null, false );
+        }
+      });
     });
   }
 ));
