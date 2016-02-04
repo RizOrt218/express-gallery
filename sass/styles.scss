@@ -266,6 +266,8 @@ body {
 
 //========= NEW FORM ==================//
 .formWrapper {
+  border: 2px solid black;
+  padding: 5%;
   background: #9dcca6;
   background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
   background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
@@ -325,7 +327,6 @@ div.inputTextName {
 }
 .singleImage {
   box-shadow: 2px 2px 20px 2px #666666;
-  border: solid white;
   width: 100%;
 }
 .editNdeletBtn {
@@ -389,10 +390,17 @@ div.inputTextName {
   display: none;
 
   @media #{ $large } {
-    background-color: green;
+    // background-color: green;
     display: block;
-    padding: 2%;
+    padding: 3%;
+    height: 1000px;
+    width: 550px;
+    overflow-x: hidden;
     // margin-top: 10%;
+
+    ::-webkit-scrollbar-track {
+        background-color: #b46868;
+    }
   }
 }
 .mainPhotoWrapper {
@@ -406,14 +414,17 @@ div.inputTextName {
   }
   .featureNthumbs {
     display: flex;
-    border: 2px solid red;
+    // border: 2px solid red;
     flex-flow: row nowrap;
     padding: 5%;
+
+
   }
   .mainPhotoWrapper {
-  background-color: pink;
+  // background-color: pink;
   flex-flow: row wrap;
     padding: 5% 0% 5% 0%;
+    width: 100%;
     // margin: 5% 0% 5% 5%;
   }
 }
