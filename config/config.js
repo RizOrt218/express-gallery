@@ -1,7 +1,9 @@
 module.exports = {
   'PORT' : 7766,
   'SESSION' : {
-    'secret' : 'blah'
+    'secret' : 'blah',
+    "saveUninitialized": true,
+    "resave": true
   }
   // ,
   // 'CREDENTIALS' : {

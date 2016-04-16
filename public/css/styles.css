@@ -1,39 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Rock+Salt);
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Antic+Didone);
 * {
   margin: 0px; }
 
 * {
   box-sizing: border-box; }
 
-.landingPage {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  background-color: #D7E0D9; }
+.mainPic {
+  background-image: url("http://a.fastcompany.net/multisite_files/coexist/imagecache/1280/article_feature/1280-boston-ma-smart-city.jpg");
+  background-repeat: no-repeat;
+  height: 100%; }
 
 .title {
-  height: auto;
-  flex: 0 0 50%;
-  text-align: center;
-  font-family: 'Rock Salt', cursive;
-  color: #34693F; }
-
-.mainPic {
-  flex: 0 1 90%;
-  background-image: fill; }
-
-.mainPic img {
-  flex-shrink: 0;
-  min-height: auto;
-  min-width: 100%;
-  border-radius: 5px; }
+  position: absolute;
+  z-index: 5;
+  color: #FDFDFD;
+  font-family: 'Antic Didone', serif;
+  background-color: rgba(98, 114, 113, 0.6);
+  padding: 0px 2em;
+  min-height: 95%; }
+  .title h1 {
+    font-size: 30px; }
 
 .navBar {
+  position: absolute;
+  z-index: 6;
   display: flex;
-  flex-flow: row wrap;
-  flex: 0 0 90%;
-  justify-content: space-between; }
+  flex-flow: column wrap;
+  float: right; }
 
 .landingPageNav {
   text-decoration: none; }
@@ -68,7 +63,6 @@
   text-decoration: none; }
 
 body {
-  background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
   background-size: cover; }
 
 .topbar {

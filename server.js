@@ -74,6 +74,6 @@ app.use( '/home', landingPage );
 app.set('view engine', 'jade');
 app.set('views', './templates');
 
-app.listen( 7766, function () {
+app.listen( CONFIG.PORT, function () {
   db.sequelize.sync();
 });
