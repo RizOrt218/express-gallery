@@ -10,7 +10,7 @@ $large: "only screen and (min-width:600px)";
 
 $colorVariable: #C1A385;
 
-@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
 @mixin gradientBg() {
   background: #9dcca6;
@@ -30,15 +30,20 @@ $colorVariable: #C1A385;
 }
 
 .topHeader {
-  background-color: pink;
+  display: inline-flex;
+
+  .mainHeader {
+    padding: 0px 6em;
+  }
+  .outlinePar {
+    flex: 1;
+  }
 }
 
 .title {
   position: absolute;
   z-index: 5;
-  // text-align: center;
   color: #FDFDFD;
-  font-family: 'Lora', serif;
   background-color: rgba(#627271, 0.6%);
   padding: 0px 2em;
   min-height: 100%;
@@ -113,7 +118,7 @@ body {
   border-right: 1px dotted #666666;
 
   h1 {
-    font-family: 'Lora', serif;
+    font-family: 'Raleway', sans-serif;
   }
 }
 
