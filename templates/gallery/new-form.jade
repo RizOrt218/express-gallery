@@ -2,16 +2,20 @@ doctype html
 html(lang="en")
   head
     link(rel="stylesheet" href="/css/styles.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     title
   body
-    .formWrapper
+    .form-style-8
+      h2 Add New Photo
       form(name="new_photo", method="POST", action="/gallery")
         input(type="hidden", name="_method", placeholder="POST")
-        div.inputTextName Title&nbsp
-          input(type="text", name="title", placeholder="Enter Title" autofocus)
-        .inputTextName Link&nbsp
-          input(type="text", name="link", placeholder="Enter URL")
-        .inputTextName Description&nbsp
-          input(type="text", name="description", placeholder="Description of photo")
+        input(type="text", name="title", placeholder="Enter Title" autofocus)
+        input(type="text", name="link", placeholder="Enter URL")
+        input(type="text", name="description", placeholder="Description of photo")
 
-          input.submitButton(type="submit" name="submit" value="Submit")
+        input.waves-effect.waves-light.btn-large(type="submit" name="submit" value="Submit")
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+    script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
