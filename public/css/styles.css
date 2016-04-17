@@ -2,7 +2,8 @@
 * {
   margin: 0px;
   box-sizing: border-box;
-  color: #999999; }
+  color: #999999;
+  transition: all 1s ease; }
 
 .mainPic {
   background-image: url("http://a.fastcompany.net/multisite_files/coexist/imagecache/1280/article_feature/1280-boston-ma-smart-city.jpg");
@@ -22,14 +23,30 @@
 .topHeader {
   display: flex; }
   .topHeader .mainHeader {
-    padding: 0px 9em;
     text-shadow: 1px 3px 5px #666666;
-    color: #666666; }
+    color: #666666;
+    margin: auto; }
     .topHeader .mainHeader h1 {
       font-family: 'Russo One', sans-serif; }
+      @media only screen and (min-width: 700px) {
+        .topHeader .mainHeader h1 {
+          margin: auto 30px; } }
+      @media only screen and (min-width: 900px) {
+        .topHeader .mainHeader h1 {
+          margin: auto 100px; } }
   .topHeader .outlinePar {
+    flex: 1 0 13%;
+    display: none;
     border-left: 1px dotted #666666;
-    flex: 1; }
+    padding: 10px;
+    font-size: 12px;
+    margin: auto; }
+    @media only screen and (min-width: 700px) {
+      .topHeader .outlinePar {
+        display: block; } }
+    @media only screen and (min-width: 900px) {
+      .topHeader .outlinePar {
+        flex: 1 0 30%; } }
 
 .navBar {
   z-index: 6;
@@ -54,30 +71,13 @@ body {
   border-bottom: 1px dotted #666666;
   margin-bottom: 16px; }
 
-.outlinePar {
-  padding: 10px;
-  font-size: 12px;
-  margin: auto; }
-
 .topPage img {
   height: 25em;
   width: 60em; }
 
-.pLayout {
-  display: none; }
-  @media only screen and (min-width: 600px) {
-    .pLayout {
-      text-align: justify;
-      padding: 3% 6% 3% 3%;
-      width: 50%;
-      display: block;
-      color: #666666;
-      font-size: 18px;
-      line-height: 19px; } }
-
 .imgDiv {
   transition: all 1s ease; }
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 700px) {
     .imgDiv {
       padding: 0% 3% 2% 5%;
       width: 50%; } }
@@ -173,7 +173,7 @@ div.inputTextName {
   flex-flow: row wrap;
   padding: 1% 0% 5% 0%; }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .thumbWrapper {
     display: block;
     padding: 3%;
@@ -188,7 +188,7 @@ div.inputTextName {
   padding-right: 5%;
   padding-left: 5%; }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .textWrap {
     padding: 5%; }
   .featureNthumbs {
@@ -197,3 +197,15 @@ div.inputTextName {
     flex-flow: row wrap;
     padding: 5% 0% 5% 0%;
     width: 100%; } }
+
+@media only screen and (max-width: 940px), only screen and (max-device-width: 940px) {
+  border: 2px solid red; }
+
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+  border: 2px solid yellow; }
+
+@media only screen and (max-width: 530px), only screen and (max-device-width: 530px) {
+  border: 2px solid blue; }
+
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  border: 2px solid green; }

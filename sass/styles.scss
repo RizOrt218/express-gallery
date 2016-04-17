@@ -1,13 +1,15 @@
 * {
   margin: 0px;
   box-sizing: border-box;
-  color: lighten(#666, 20%)
+  color: lighten(#666, 20%);
+  transition: all 1s ease;
 }
 
 // MEDIA QUERY RANGES
 
-$medium: "only screen and (min-width:400px)";
-$large: "only screen and (min-width:600px)";
+$small: "only screen and (min-width:500px)";
+$medium: "only screen and (min-width:700px)";
+$large: "only screen and (min-width:900px)";
 
 $colorVariable: #C1A385;
 
@@ -38,16 +40,26 @@ $colorVariable: #C1A385;
   display: flex;
 
   .mainHeader {
-    padding: 0px 9em;
     text-shadow: 1px 3px 5px #666666;
     color: #666666;
+    // float: right;
+    margin: auto;
+
     h1 {
       font-family: 'Russo One', sans-serif;
+      @media #{$medium} {margin: auto 30px;}
+      @media #{$large} {margin: auto 100px;}
     }
   }
   .outlinePar {
+    flex: 1 0 13%;
+    display: none;
     border-left: 1px dotted #666666;
-    flex: 1;
+    padding: 10px;
+    font-size: 12px;
+    margin: auto;
+    @media #{$medium} {display: block;}
+    @media #{$large} {flex: 1 0 30%;}
   }
 }
 
@@ -78,15 +90,12 @@ body {
   display: flex;
   padding-left: 3%;
 
-  // @media #{ $large } {
+  // @media #{ $medium } {
   //   // margin-bottom: -5px;
   //   padding-left: 5%;
   // }
 
 }
-// .logoutForm {
-//   margin-left: -15px;
-// }
 
 .spaceHeader {
   height: 6em;
@@ -95,14 +104,13 @@ body {
 }
 
 
-.outlinePar {
-  padding: 10px;
-  font-size: 12px;
-  margin: auto;
-}
+// .outlinePar {
+//   display: none;
 
-// .postLogButton:hover {
-//   color: #9dcca6;
+//   @media #{$medium} {
+//   padding: 10px;
+//   font-size: 12px;
+//   margin: auto}
 // }
 
 //========= STATIC PHOTO =============//
@@ -111,23 +119,23 @@ body {
   height: 25em;
   width: 60em;
 }
-.pLayout {
-  display: none;
+// .outlinePr {
+//   display: none;
 
-  @media #{ $large } {
-    text-align: justify;
-    padding: 3% 6% 3% 3%;
-    width: 50%;
-    display: block;
-    color: #666666;
-    font-size: 18px;
-    line-height: 19px;
-  }
-}
+//   @media #{ $medium } {
+//     text-align: justify;
+//     // padding: 3% 6% 3% 3%;
+//     width: 50%;
+//     display: block;
+//     color: #666666;
+//     font-size: 18px;
+//     line-height: 19px;
+//   }
+// }
 .imgDiv {
   transition: all 1s ease;
 
-  @media #{ $large } {
+  @media #{ $medium } {
     padding: 0% 3% 2% 5%;
     width: 50%;
   }
@@ -141,7 +149,7 @@ body {
 
 .photoTitle {
   color: lighten(#666, 20%);
-  @media #{ $large } {
+  @media #{ $medium } {
     // font-size: 25px;
   }
 }
@@ -221,10 +229,6 @@ div.inputTextName {
   width: 100%;
 }
 
-// .submitButton:hover {
-//   color: #9dcca6;
-// }
-
 //=== SINGLE PHOTO /gallery/:id ========//
 
 .textLink {
@@ -251,7 +255,7 @@ div.inputTextName {
 
 .thumbWrapper {
 
-  @media #{ $large } {
+  @media #{ $medium } {
     display: block;
     padding: 3%;
     height: 44em;
@@ -269,7 +273,7 @@ div.inputTextName {
   padding-left: 5%;
 }
 
-@media #{ $large } {
+@media #{ $medium } {
   .textWrap {
     padding: 5%;
   }
@@ -285,3 +289,23 @@ div.inputTextName {
   }
 }
 
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){
+  border: 2px solid red;
+}
+
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+  border: 2px solid yellow;
+}
+
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){
+  border: 2px solid blue;
+}
+
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){
+  border: 2px solid green;
+
+}
