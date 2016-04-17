@@ -9,7 +9,7 @@
   background-size: cover; }
 
 .topHeader {
-  display: inline-flex; }
+  display: flex; }
   .topHeader .mainHeader {
     padding: 0px 6em; }
   .topHeader .outlinePar {
