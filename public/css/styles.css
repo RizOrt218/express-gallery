@@ -2,9 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import url(https://fonts.googleapis.com/css?family=Antic+Didone);
 * {
-  margin: 0px; }
-
-* {
+  margin: 0px;
   box-sizing: border-box; }
 
 .mainPic {
@@ -82,12 +80,6 @@ body {
 .logoutForm {
   margin-left: -15px; }
 
-.textStyle {
-  color: #666666;
-  word-wrap: break-word;
-  text-shadow: 1px 3px 5px #666666;
-  font-family: "Poiret One"; }
-
 .spaceHeader {
   height: 6em;
   border-bottom: 1px dotted #666666;
@@ -162,36 +154,25 @@ body {
   transition: all 1s ease; }
 
 .photoTitle {
-  font-size: 30px;
   color: #666666; }
-  @media only screen and (min-width: 600px) {
-    .photoTitle {
-      font-size: 25px; } }
 
-@media only screen and (min-width: 600px) {
-  .thumbnailImages {
-    margin: 0% 5% 5% 5%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between; } }
+.thumbnailImages {
+  display: flex;
+  flex-flow: row wrap; }
 
-@media only screen and (min-width: 600px) {
-  .titlePhotoDiv {
-    flex-flow: row wrap;
-    margin-top: 10px;
-    padding: 2%; } }
+.titlePhotoDiv {
+  border-top: 1px dotted #666666;
+  margin-bottom: 20px; }
 
 .uploadedPhoto {
   margin-top: 2%;
-  border: 5px double #666666;
-  width: 100%; }
-  @media only screen and (min-width: 600px) {
-    .uploadedPhoto {
-      height: 220px;
-      width: 320px; } }
+  border: 5px double transparent;
+  width: 300px;
+  height: 200px;
+  -webkit-filter: invert(0.1); }
 
 .uploadedPhoto:hover {
-  border: 8px double #9dcca6; }
+  -webkit-filter: invert(0); }
 
 .formWrapper {
   border: 2px solid black;
@@ -208,11 +189,7 @@ div.inputTextName {
   border: 2px solid blue; }
 
 .form-style-8 {
-  margin: auto;
-  font-family: 'Open Sans Condensed', arial, sans;
-  width: 500px;
   padding: 30px;
-  background: #FFFFFF;
   margin: 50px auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -359,15 +336,3 @@ div.inputTextName {
 .mainPhotoWrapper {
   padding-right: 5%;
   padding-left: 5%; }
-
-@media only screen and (min-width: 600px) {
-  .textWrap {
-    padding: 5%; }
-  .featureNthumbs {
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 5%; }
-  .mainPhotoWrapper {
-    flex-flow: row wrap;
-    padding: 5% 0% 5% 0%;
-    width: 100%; } }

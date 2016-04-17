@@ -1,7 +1,5 @@
 * {
   margin: 0px;
-}
-*{
   box-sizing: border-box;
 }
 
@@ -146,12 +144,12 @@ body {
 .logoutForm {
   margin-left: -15px;
 }
-.textStyle {
-  color: #666666;
-  word-wrap: break-word;
-  text-shadow: 1px 3px 5px #666666;
-  font-family: $poiret-one;
-}
+// .textStyle {
+//   color: #666666;
+//   word-wrap: break-word;
+//   text-shadow: 1px 3px 5px #666666;
+//   font-family: $poiret-one;
+// }
 
 .spaceHeader {
   height: 6em;
@@ -240,43 +238,46 @@ body {
 //========= EACH PHOTO CONTENT =======
 
 .photoTitle {
-  font-size: 30px;
+  // font-size: 30px;
   color: #666666;
 
   @media #{ $large } {
-    font-size: 25px;
+    // font-size: 25px;
   }
 }
 
 .thumbnailImages {
-
-  @media #{ $large } {
-    margin: 0% 5% 5% 5%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  // @media #{ $large } {
+  //   margin: 0% 5% 5% 5%;
+  //   display: flex;
+  //   flex-flow: row wrap;
+  //   justify-content: space-between;
+  // }
 }
 .titlePhotoDiv {
-
-  @media #{ $large } {
-    flex-flow: row wrap;
-    margin-top: 10px;
-    padding: 2%;
-  }
+  // background-color: pink;
+  border-top: 1px dotted #666666;
+  margin-bottom: 20px;
+  // margin: 5px;
+  // @media #{ $large } {
+  //   flex-flow: row wrap;
+  //   margin-top: 10px;
+  //   padding: 2%;
+  // }
 }
 .uploadedPhoto {
   margin-top: 2%;
-  border: 5px double #666666;
-  width: 100%;
-
-  @media #{ $large } {
-    height: 220px;
-    width: 320px;
-  }
+  border: 5px double transparent;
+  width: 300px;
+  height: 200px;
+  -webkit-filter: invert(0.1);
 }
+
 .uploadedPhoto:hover {
-  border: 8px double #9dcca6;
+  -webkit-filter: invert(0);
+  // border: 5px double #9dcca6;
 }
 
 
@@ -299,11 +300,11 @@ div.inputTextName {
 
 .form-style-8{
 
-    margin: auto;
-    font-family: 'Open Sans Condensed', arial, sans;
-    width: 500px;
+    // margin: auto;
+    // font-family: 'Open Sans Condensed', arial, sans;
+    // width: 500px;
     padding: 30px;
-    background: #FFFFFF;
+    // background: #FFFFFF;
     margin: 50px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -471,24 +472,24 @@ div.inputTextName {
   padding-left: 5%;
 }
 
-@media #{ $large } {
-  .textWrap {
-    padding: 5%;
-  }
-  .featureNthumbs {
-    display: flex;
-    // border: 2px solid red;
-    flex-flow: row nowrap;
-    padding: 5%;
+// @media #{ $large } {
+//   .textWrap {
+//     padding: 5%;
+//   }
+//   .featureNthumbs {
+//     display: flex;
+//     // border: 2px solid red;
+//     flex-flow: row nowrap;
+//     padding: 5%;
 
 
-  }
-  .mainPhotoWrapper {
-  // background-color: pink;
-  flex-flow: row wrap;
-    padding: 5% 0% 5% 0%;
-    width: 100%;
-    // margin: 5% 0% 5% 5%;
-  }
-}
+//   }
+//   .mainPhotoWrapper {
+//   // background-color: pink;
+//   flex-flow: row wrap;
+//     padding: 5% 0% 5% 0%;
+//     width: 100%;
+//     // margin: 5% 0% 5% 5%;
+//   }
+// }
 

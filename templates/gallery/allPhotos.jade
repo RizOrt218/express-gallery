@@ -5,12 +5,12 @@ block content
   .thumbnailImages
     each photo in gallery
       .titlePhotoDiv
-        .photoTitle.textStyle
-          h4 #{photo.title}
-
         .eachPhoto
           a(href='gallery/#{photo.id}')
             img.uploadedPhoto(src='#{photo.link}')
+
+        .photoTitle.textStyle.truncate
+          p #{photo.title}
 
         //- div.photoDescription
           p #{photo.description}

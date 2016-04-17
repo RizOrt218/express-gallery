@@ -2,18 +2,32 @@ doctype html
 html(lang="en")
   head
     link(rel="stylesheet" href="/css/styles.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     title
   body
-    div.formWrapper
-      form(action="/gallery/#{gallery.id}", method="POST")
-        input(type="hidden" name="_method" value="PUT")
-        div.inputTextName Author &nbsp
-          input(type="text" value="#{gallery.author}" name="author")
-        div.inputTextName Title&nbsp
-          input(type="text", name="title", value="#{gallery.title}" autofocus)
-        div.inputTextName Link &nbsp
-          input(type='text' value="#{gallery.link}" name="link")
-        div.inputTextName Description &nbsp
-          input.inputTextName(type='text' value="#{gallery.description}" name="description")
-        div
-          input.submitButton(type='submit' value="submit")
+    .container
+      .spaceHeader
+      .topHeader.row
+        .mainHeader.col.l6
+          h1 _City Lights
+        .outlinePar.col.l6
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
+      div.form-style-8
+        h2 Edit Post
+        form(action="/gallery/#{gallery.id}", method="POST")
+          input(type="hidden" name="_method" value="PUT")
+          //- div Author &nbsp
+          //- input(type="text" value="#{gallery.author}" name="author")
+          div Title&nbsp
+            input(type="text" name="title" value="#{gallery.title}" autofocus)
+          div Link &nbsp
+            input(type="text" value="#{gallery.link}" name="link")
+          div Description &nbsp
+            input(type='text' value="#{gallery.description}" name="description")
+          div
+            input.waves-effect.waves-light.btn-large(type='submit' value="submit")
+
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+  script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
