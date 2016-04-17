@@ -7,21 +7,28 @@ head
   meta(name='viewport', content='width=device-width, initial-scale=1')
   title Login
 body
-  //- div.valign-wrapper.container
-    form(method="POST" action="/users/login")
-      div.inputTextName Username&nbsp
-        input(type="text" name="username")
-      div.inputTextName Password&nbsp&nbsp
-        input(type="password" name="password")
-      button.waves-effect.waves-light.btn-large(type="submit") Login
-  div.form-style-8
-    h2 Login to your account
-    form(method="POST" action="/users/login")
-      input(type="text" name="username" placeholder="Username")
-      input(type="password" name="password" placeholder="Password")
-      button.waves-effect.waves-light.btn-large(type="submit") Login
-    form
-  div
+  .container
+    .spaceHeader
+    .topHeader.row
+      .mainHeader.col.l6
+        h1 _City Lights
+      .outlinePar.col.l6
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
+    //- div.valign-wrapper.container
+      form(method="POST" action="/users/login")
+        div.inputTextName Username&nbsp
+          input(type="text" name="username")
+        div.inputTextName Password&nbsp&nbsp
+          input(type="password" name="password")
+        button.waves-effect.waves-light.btn-large(type="submit") Login
+    div.form-style-8
+      h2 Login to your account
+      form(method="POST" action="/users/login")
+        input(type="text" name="username" placeholder="Username")
+        input(type="password" name="password" placeholder="Password")
+        button.waves-effect.waves-light.btn-large(type="submit") Login
+      form
+    div
 
   script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
   script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')

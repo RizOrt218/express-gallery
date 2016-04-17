@@ -323,8 +323,8 @@ div.inputTextName {
     .thumbWrapper {
       display: block;
       padding: 3%;
-      height: 1000px;
-      width: 550px;
+      height: 52em;
+      width: 450px;
       overflow-x: hidden; }
       .thumbWrapper ::-webkit-scrollbar-track {
         background-color: #b46868; } }
