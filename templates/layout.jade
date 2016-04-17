@@ -6,20 +6,21 @@ html(lang="en")
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title
   body
-    .wholeGalleryWrapper.container
+    .container
       .spaceHeader
-      .topHeader.row
-        .mainHeader.col.l6
+      .topHeader
+        .mainHeader
           h1 _City Lights
-        .outlinePar.col.l6
+        .outlinePar
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
-
       .mainPageButton.right
         form.postForm(method="GET", action="/gallery/new")
           button.waves-effect.waves-teal.btn-flat(type="submit", value="submit") Post New
 
         form.logoutForm(method="GET", action="/users/logout")
           button.waves-effect.waves-teal.btn-flat(type="submit", value="submit") Logout
+
+          button.waves-effect.waves-light.btn-flat(href="/home") Main
 
       .topPage
         img.mainImage(src='http://www.mymusicisbetterthanyours.com/wp-content/uploads/2014/05/san-fran-night.jpg')

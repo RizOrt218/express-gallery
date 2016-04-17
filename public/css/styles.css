@@ -24,13 +24,18 @@
   min-height: 100%; }
   .title h1 {
     font-size: 30px; }
+  .title p {
+    margin-top: -2em; }
 
 .navBar {
-  position: absolute;
   z-index: 6;
   display: flex;
   flex-flow: column wrap;
   float: right; }
+
+#login:hover, #register:hover, #galleries:hover {
+  border-bottom: 1px solid white;
+  color: white; }
 
 .landingPageNav {
   text-decoration: none; }

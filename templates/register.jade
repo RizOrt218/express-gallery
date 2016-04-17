@@ -13,15 +13,22 @@ body
     div.inputTextName Password&nbsp&nbsp
       input(type="password" name="password")
     button.editButton(type="submit") Register
+  .container
+    .spaceHeader
+    .topHeader
+      .mainHeader
+        h1 _City Lights
+      .outlinePar
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
 
-  div.form-style-8
-    h2 Register to Express Gallery
-    form(method="POST" action="/users/register")
-      input(type="text" name="username" placeholder="Username")
-      input(type="password" name="password" placeholder="Password")
-      button.waves-effect.waves-light.btn-large(type="submit") Register
-    form
-  div
+    div.form-style-8
+      h2 Register to Express Gallery
+      form(method="POST" action="/users/register")
+        input(type="text" name="username" placeholder="Username")
+        input(type="password" name="password" placeholder="Password")
+        button.waves-effect.waves-light.btn-large(type="submit") Register
+      form
+    div
 
   script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
   script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')

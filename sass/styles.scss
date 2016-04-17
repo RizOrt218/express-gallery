@@ -51,14 +51,23 @@ $colorVariable: #C1A385;
     h1 {
       font-size: 30px;
     }
+
+    p {
+      margin-top: -2em;
+    }
 }
 
 .navBar {
-  position: absolute;
+  // position: absolute;
   z-index: 6;
   display: flex;
   flex-flow: column wrap;
   float: right;
+}
+
+#login:hover, #register:hover, #galleries:hover {
+  border-bottom: 1px solid white;
+  color: white;
 }
 
 .landingPageNav {
