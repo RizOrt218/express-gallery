@@ -3,11 +3,30 @@ html(lang="en")
 head
   meta(charset="UTF-8")
   link(rel="stylesheet" href="./../css/styles.css")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
+  meta(name='viewport', content='width=device-width, initial-scale=1')
   title Login
 body
-  form(method="POST" action="/users/login")
-    div.inputTextName Username&nbsp
-      input(type="text" name="username")
-    div.inputTextName Password&nbsp&nbsp
-      input(type="password" name="password")
-    button.editButton(type="submit") Login
+  //- div.valign-wrapper.container
+    form(method="POST" action="/users/login")
+      div.inputTextName Username&nbsp
+        input(type="text" name="username")
+      div.inputTextName Password&nbsp&nbsp
+        input(type="password" name="password")
+      button.waves-effect.waves-light.btn-large(type="submit") Login
+  div.form-style-8
+    h2 Login to your account
+    form
+      input(type="text" name="field1" placeholder="Username")
+      input(type="password" name="field2" placeholder="Password")
+      button.waves-effect.waves-light.btn-large(type="submit") Login
+    form
+  div
+
+    div.loginImg
+      img(src="https://s.yimg.com/bt/api/res/1.2/TnR4eJDa6895xxp6AhUH8Q--/YXBwaWQ9eW5ld3NfbGVnbztmaT1pbnNldDtoPTQxNTtpbD1wbGFuZTtxPTc1O3c9NjMw/http://l.yimg.com/os/publish-images/homes/2013-05-07/5bc4de3f-1c75-42e3-9264-94161870335c_columbus-ohio.jpg")
+
+
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+      script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
