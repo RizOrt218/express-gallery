@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   box-sizing: border-box;
+  color: lighten(#666, 20%)
 }
 
 // MEDIA QUERY RANGES
@@ -10,16 +11,7 @@ $large: "only screen and (min-width:600px)";
 
 $colorVariable: #C1A385;
 
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-
-@mixin gradientBg() {
-  background: #9dcca6;
-  background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-}
+@import url(https://fonts.googleapis.com/css?family=Russo+One);
 
 //========== LANDING PAGE ===============//
 
@@ -29,36 +21,37 @@ $colorVariable: #C1A385;
   background-size: cover;
 }
 
+.title {
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  width: 14em;
+  background-color: lighten(rgba(#270D03, 0.3), 4%);
+
+  p {
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+  }
+}
+
 .topHeader {
   display: flex;
 
   .mainHeader {
-    padding: 0px 6em;
+    padding: 0px 9em;
+    text-shadow: 1px 3px 5px #666666;
+    color: #666666;
+    h1 {
+      font-family: 'Russo One', sans-serif;
+    }
   }
   .outlinePar {
+    border-left: 1px dotted #666666;
     flex: 1;
   }
 }
 
-.title {
-  position: absolute;
-  z-index: 5;
-  color: #FDFDFD;
-  background-color: rgba(#627271, 0.6%);
-  padding: 0px 2em;
-  min-height: 100%;
-
-    h1 {
-      font-size: 30px;
-    }
-
-    p {
-      margin-top: -2em;
-    }
-}
-
 .navBar {
-  // position: absolute;
   z-index: 6;
   display: flex;
   flex-flow: column wrap;
@@ -66,31 +59,12 @@ $colorVariable: #C1A385;
 }
 
 #login:hover, #register:hover, #galleries:hover {
-  border-bottom: 1px solid white;
-  color: white;
-}
-
-.landingPageNav {
-  text-decoration: none;
-}
-
-.button.login {
-  // border: 1px solid purple;
-}
-
-.button.register {
-  // border: 1px solid green;
-}
-
-.button.galleries {
-  // border: 1px solid yellow;
-  padding: 10px;
-  text-decoration: none;
+  // border-bottom: 1px solid white;
+  // color: white;
 }
 
 //=========== STATIC PAGE ===============//
 body {
-  // background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
   background-size: cover;
 }
 
@@ -103,17 +77,16 @@ body {
 .mainPageButton {
   display: flex;
   padding-left: 3%;
-  margin-bottom: -9px;
 
-  @media #{ $large } {
-    margin-bottom: -5px;
-    padding-left: 5%;
-  }
+  // @media #{ $large } {
+  //   // margin-bottom: -5px;
+  //   padding-left: 5%;
+  // }
 
 }
-.logoutForm {
-  margin-left: -15px;
-}
+// .logoutForm {
+//   margin-left: -15px;
+// }
 
 .spaceHeader {
   height: 6em;
@@ -121,15 +94,6 @@ body {
   margin-bottom: 16px;
 }
 
-.mainHeader {
-  text-shadow: 1px 3px 5px #666666;
-  color: #666666;
-  border-right: 1px dotted #666666;
-
-  h1 {
-    font-family: 'Raleway', sans-serif;
-  }
-}
 
 .outlinePar {
   padding: 10px;
@@ -137,9 +101,9 @@ body {
   margin: auto;
 }
 
-.postLogButton:hover {
-  color: #9dcca6;
-}
+// .postLogButton:hover {
+//   color: #9dcca6;
+// }
 
 //========= STATIC PHOTO =============//
 
@@ -176,9 +140,7 @@ body {
 //========= EACH PHOTO CONTENT =======
 
 .photoTitle {
-  // font-size: 30px;
-  color: #666666;
-
+  color: lighten(#666, 20%);
   @media #{ $large } {
     // font-size: 25px;
   }
@@ -187,23 +149,10 @@ body {
 .thumbnailImages {
   display: flex;
   flex-flow: row wrap;
-  // @media #{ $large } {
-  //   margin: 0% 5% 5% 5%;
-  //   display: flex;
-  //   flex-flow: row wrap;
-  //   justify-content: space-between;
-  // }
 }
 .titlePhotoDiv {
-  // background-color: pink;
   border-top: 1px dotted #666666;
   margin-bottom: 20px;
-  // margin: 5px;
-  // @media #{ $large } {
-  //   flex-flow: row wrap;
-  //   margin-top: 10px;
-  //   padding: 2%;
-  // }
 }
 .uploadedPhoto {
   margin-top: 2%;
@@ -215,21 +164,7 @@ body {
 
 .uploadedPhoto:hover {
   -webkit-filter: invert(0);
-  // border: 5px double #9dcca6;
 }
-
-
-//========= NEW FORM ==================//
-// .formWrapper {
-//   border: 2px solid black;
-//   padding: 5%;
-//   background: #9dcca6;
-//   background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-//   background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-//   background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-//   background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-//   background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-// }
 
 div.inputTextName {
   border: 2px solid blue;
@@ -241,7 +176,6 @@ div.inputTextName {
     // font-family: 'Open Sans Condensed', arial, sans;
     // width: 500px;
     padding: 30px;
-    // background: #FFFFFF;
     margin: 50px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -251,7 +185,7 @@ div.inputTextName {
 .form-style-8 h2{
     background: #4D4D4D;
     text-transform: uppercase;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Russo One', sans-serif;
     color: #797979;
     font-size: 18px;
     font-weight: 100;
@@ -286,118 +220,44 @@ div.inputTextName {
   -webkit-filter: blur(3px) brightness(1.2);
   width: 100%;
 }
-.submitButton {
-  height: 40px;
-  width: 100px;
-  background: #9dcca6;
-  background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-  -webkit-border-radius: 15;
-  -moz-border-radius: 15;
-  border-radius: 15px;
-  text-shadow: 1px 1px 3px #666666;
-  -webkit-box-shadow: 0px 1px 10px #666666;
-  -moz-box-shadow: 0px 1px 10px #666666;
-  box-shadow: 0px 1px 10px #666666;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  text-decoration: none;
-  flex-grow: 1;
-  margin: 10px;
-}
 
-.submitButton:hover {
-  color: #9dcca6;
-}
+// .submitButton:hover {
+//   color: #9dcca6;
+// }
 
 //=== SINGLE PHOTO /gallery/:id ========//
 
 .textLink {
-  font-size: 16px;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
-  padding-bottom: 2%;
   margin-bottom: 5%;
-  padding-top: 2%;
-  margin-top: 2%;
 }
 .singleImage {
   box-shadow: 2px 2px 20px 2px #666666;
   width: 100%;
 }
 .editNdeletBtn {
-  // background-color: blue;
   display: flex;
   flex-flow: row nowrap;
-  // padding: 5%;
 }
 .singlePhotoPar {
-  // box-shadow: 0px 5px 10px #666666;
   text-align: justify;
-  // font-family: $poiret-one;
-  // padding: 5%;
-  // background-color: white;
-  padding-top: 5%;
+  // padding-top: 5%;
   font-size: 12px;
 }
 .buttonBar {
-  // background-color: green;
   display: flex;
   flex-flow: row wrap;
   padding: 1% 0% 5% 0%;
-  // border: 1px solid red;
-}
-.singleButtonStyle {
-  height: 30px;
-  width: 100px;
-  background: #9dcca6;
-  background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-  -webkit-border-radius: 15;
-  -moz-border-radius: 15;
-  border-radius: 10px;
-  text-shadow: 1px 1px 3px #666666;
-  -webkit-box-shadow: 0px 1px 10px #666666;
-  -moz-box-shadow: 0px 1px 10px #666666;
-  box-shadow: 0px 1px 10px #666666;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 15px;
-  text-align: center;
-  text-decoration: none;
-  flex-grow: 1;
-  // margin: 10px;
-}
-
-.editButton:hover {
-  color: #9dcca6;
-}
-.deleteButton:hover {
-  color: #9dcca6;
-}
-.backButton:hover {
-  color: #9dcca6;
 }
 
 .thumbWrapper {
-  display: none;
 
   @media #{ $large } {
-    // background-color: green;
     display: block;
     padding: 3%;
-    height: 52em;
+    height: 44em;
     width: 450px;
     overflow-x: hidden;
-    // margin-top: 10%;
+    margin-top: 10%;
 
     ::-webkit-scrollbar-track {
         background-color: #b46868;
@@ -415,18 +275,13 @@ div.inputTextName {
   }
   .featureNthumbs {
     display: flex;
-    // border: 2px solid red;
-    flex-flow: row nowrap;
-    // padding: 5%;
 
 
   }
   .mainPhotoWrapper {
-  // background-color: pink;
   flex-flow: row wrap;
     padding: 5% 0% 5% 0%;
     width: 100%;
-    // margin: 5% 0% 5% 5%;
   }
 }
 

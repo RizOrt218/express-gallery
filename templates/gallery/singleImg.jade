@@ -10,31 +10,31 @@ html(lang="en")
       .spaceHeader
       .topHeader
         .mainHeader
-          h1 _City Lights
+          h1 City Lights
         .outlinePar
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
 
       .featureNthumbs
         .mainPhotoWrapper
-          .photoTitle.textStyle
-            h4 #{gallery.title}
+          .photoTitle
+            p #{gallery.title}
             .textLink
               a(href="#{gallery.link}") Image Site
-            img.singleImage(src='#{gallery.link}')
+            img.materialboxed.singleImage(src='#{gallery.link}')(width="650")
 
           .buttonBar
-            if user.id === gallery.UserId
-              .editNdeletBtn
+            //- if user.id === gallery.UserId
+            .editNdeletBtn
 
-                form(method="GET", action="/gallery/#{gallery.id}/edit")
-                  button.waves-effect.waves-teal.btn-flat(type="submit", value="submit") edit
+              form(method="GET", action="/gallery/#{gallery.id}/edit")
+                button.btn.btn-flat(type="submit", value="submit") edit
 
-                form(name="delete-photo", method="POST", action="/gallery/#{gallery.id}")
-                  input(type="hidden", name="_method", value="DELETE")
-                  button.waves-effect.waves-teal.btn-flat(type="submit", value="submit") delete
+              form(name="delete-photo", method="POST", action="/gallery/#{gallery.id}")
+                input(type="hidden", name="_method", value="DELETE")
+                button.btn.btn-flat(type="submit", value="submit") delete
 
             form(method="GET", action="/gallery")
-              button.waves-effect.waves-teal.btn-flat(type="submit", value="submit") back
+              button.btn.btn-flat(type="submit", value="submit") back
 
           block editContent
 

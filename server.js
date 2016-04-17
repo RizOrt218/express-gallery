@@ -13,11 +13,6 @@ var CONFIG         = require( './config/config' );
 var bcrypt         = require('bcrypt');
 app.use( bodyParser.urlencoded ( { extended : true } ) );
 
-//configures for connect-flash === grabbed it from npm examples
-// app.use(express.cookieParser('keyboard cat'));
-// app.use(express.session({ cookie: { maxAge: 60000 }}));
-// app.use(flash());
-
 app.use( session( CONFIG.SESSION ) );
 app.use( passport.initialize() );
 app.use( passport.session() );
@@ -69,7 +64,7 @@ app.use(express.static('public'));
 app.use( '/users', userRoute );
 app.use( '/gallery', galleryRoute );
 app.use( '/home', landingPage );
-// app.use( '/', userRoute );
+app.use( '/', landingPage );
 
 app.set('view engine', 'jade');
 app.set('views', './templates');

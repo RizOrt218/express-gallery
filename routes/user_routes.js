@@ -1,11 +1,8 @@
 var express   = require( 'express' );
 var router    = express.Router();
-
 var db        = require( './../models' );
 var User      = db.User;
-
 var bodyParser= require( 'body-parser' );
-
 var passport  = require( 'passport' );
 var CONFIG    = require( '../config/config' );
 var bcrypt    = require('bcrypt');
@@ -28,7 +25,7 @@ router.route('/register')
       password: hash
     })
     .then( function ( user ) {
-      console.log("hashpassword", hash);
+      console.log("hashpassword", user);
       res.redirect( '/users/login' );
     })
     .error( function ( errors ) {
@@ -38,7 +35,7 @@ router.route('/register')
 
 router.route( '/login' )
   .get( function ( req, res ) {
-    res.render( 'login/login' );
+      res.render( 'login/login' );
   })
   .post(
     passport.authenticate('local', {
