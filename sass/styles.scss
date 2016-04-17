@@ -298,6 +298,8 @@ div.inputTextName {
 }
 
 .form-style-8{
+
+    margin: auto;
     font-family: 'Open Sans Condensed', arial, sans;
     width: 500px;
     padding: 30px;
@@ -342,6 +344,10 @@ div.inputTextName {
     overflow: hidden;
 }
 
+.loginImg img {
+  -webkit-filter: blur(3px) brightness(1.2);
+  width: 100%;
+}
 .submitButton {
   height: 40px;
   width: 100px;
