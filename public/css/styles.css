@@ -276,13 +276,9 @@ div.inputTextName {
   flex-flow: row nowrap; }
 
 .singlePhotoPar {
-  box-shadow: 0px 5px 10px #666666;
   text-align: justify;
-  font-family: "Poiret One";
-  padding: 5%;
-  background-color: white;
   padding-top: 5%;
-  font-size: 18px; }
+  font-size: 12px; }
 
 .buttonBar {
   display: flex;
@@ -336,3 +332,14 @@ div.inputTextName {
 .mainPhotoWrapper {
   padding-right: 5%;
   padding-left: 5%; }
+
+@media only screen and (min-width: 600px) {
+  .textWrap {
+    padding: 5%; }
+  .featureNthumbs {
+    display: flex;
+    flex-flow: row nowrap; }
+  .mainPhotoWrapper {
+    flex-flow: row wrap;
+    padding: 5% 0% 5% 0%;
+    width: 100%; } }

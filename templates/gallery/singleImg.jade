@@ -6,7 +6,7 @@ html(lang="en")
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title
   body
-    .wholeGalleryWrapper.container
+    .container
       .spaceHeader
       .topHeader.row
         .mainHeader.col.l6
@@ -19,7 +19,7 @@ html(lang="en")
           .photoTitle.textStyle
             h4 #{gallery.title}
             .textLink
-              p #{gallery.link}
+              a(href="#{gallery.link}") Image Site
             img.singleImage(src='#{gallery.link}')
 
           .buttonBar
@@ -48,9 +48,9 @@ html(lang="en")
             .eachPhotoContent
               //- h4 #{thumb.title}
 
-              //every photo that gets uploaded
-              //- a(href='/#{thumb.id}')
-              img.uploadedPhoto(src='#{thumb.link}')
+              //- //every photo that gets uploaded
+              a(href='#{thumb.id}')
+                img.uploadedPhoto(src='#{thumb.link}')
 
   script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
   script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')

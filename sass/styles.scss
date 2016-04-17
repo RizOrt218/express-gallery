@@ -400,13 +400,13 @@ div.inputTextName {
   // padding: 5%;
 }
 .singlePhotoPar {
-  box-shadow: 0px 5px 10px #666666;
+  // box-shadow: 0px 5px 10px #666666;
   text-align: justify;
-  font-family: $poiret-one;
-  padding: 5%;
-  background-color: white;
+  // font-family: $poiret-one;
+  // padding: 5%;
+  // background-color: white;
   padding-top: 5%;
-  font-size: 18px;
+  font-size: 12px;
 }
 .buttonBar {
   // background-color: green;
@@ -472,24 +472,24 @@ div.inputTextName {
   padding-left: 5%;
 }
 
-// @media #{ $large } {
-//   .textWrap {
-//     padding: 5%;
-//   }
-//   .featureNthumbs {
-//     display: flex;
-//     // border: 2px solid red;
-//     flex-flow: row nowrap;
-//     padding: 5%;
+@media #{ $large } {
+  .textWrap {
+    padding: 5%;
+  }
+  .featureNthumbs {
+    display: flex;
+    // border: 2px solid red;
+    flex-flow: row nowrap;
+    // padding: 5%;
 
 
-//   }
-//   .mainPhotoWrapper {
-//   // background-color: pink;
-//   flex-flow: row wrap;
-//     padding: 5% 0% 5% 0%;
-//     width: 100%;
-//     // margin: 5% 0% 5% 5%;
-//   }
-// }
+  }
+  .mainPhotoWrapper {
+  // background-color: pink;
+  flex-flow: row wrap;
+    padding: 5% 0% 5% 0%;
+    width: 100%;
+    // margin: 5% 0% 5% 5%;
+  }
+}
 
