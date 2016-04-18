@@ -3,112 +3,68 @@
   margin: 0px;
   box-sizing: border-box;
   color: #999999;
-  transition: all 1s ease; }
+  transition: all 0.5s ease; }
 
-.mainPic {
-  background-image: url("http://a.fastcompany.net/multisite_files/coexist/imagecache/1280/article_feature/1280-boston-ma-smart-city.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
+.mainPic img {
+  position: fixed;
+  width: 100%; }
 
 .title {
   position: absolute;
-  z-index: 5;
-  height: 100%;
-  width: 14em;
-  background-color: rgba(58, 19, 4, 0.3); }
+  z-index: 2;
+  width: 100%;
+  min-height: 50px;
+  background-color: rgba(52, 62, 62, 0.7);
+  text-align: center;
+  top: 30rem; }
   .title p {
-    font-family: 'Russo One', sans-serif;
-    font-size: 25px; }
-
-.topHeader {
-  display: flex; }
-  .topHeader .mainHeader {
-    text-shadow: 1px 3px 5px #666666;
-    color: #666666;
-    margin: auto; }
-    .topHeader .mainHeader h1 {
-      font-family: 'Russo One', sans-serif; }
-      @media only screen and (min-width: 700px) {
-        .topHeader .mainHeader h1 {
-          margin: auto 30px; } }
-      @media only screen and (min-width: 900px) {
-        .topHeader .mainHeader h1 {
-          margin: auto 100px; } }
-  .topHeader .outlinePar {
-    flex: 0 1 auto;
-    display: none;
-    border-left: 1px dotted #666666;
-    padding: 10px;
-    font-size: 12px;
-    margin: auto; }
-    @media only screen and (min-width: 700px) {
-      .topHeader .outlinePar {
-        display: block; } }
-    @media only screen and (min-width: 900px) {
-      .topHeader .outlinePar {
-        flex: 1 0 auto; } }
-
-.navBar {
-  z-index: 6;
-  display: flex;
-  flex-flow: column wrap;
-  float: right; }
-
-body {
-  background-size: cover; }
-
-.topbar {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center; }
-
-.mainPageButton {
-  display: flex;
-  padding-left: 3%; }
+    font-family: "Russo One", sans;
+    font-size: 50px; }
 
 .spaceHeader {
-  height: 6em;
   border-bottom: 1px dotted #666666;
-  margin-bottom: 16px; }
+  padding-bottom: 4rem; }
+
+.topHeader {
+  display: flex;
+  margin: 1rem 0rem; }
+  .topHeader .mainHeader {
+    margin: auto; }
+    .topHeader .mainHeader h1 {
+      font-family: "Russo One", sans; }
+  .topHeader .outlinePar {
+    width: 20rem;
+    min-height: 30px;
+    border-left: 1px dotted #666666;
+    padding-left: 10px; }
+    @media only screen and (max-width: 400px) {
+      .topHeader .outlinePar {
+        display: none; } }
+    @media only screen and (max-width: 700px) {
+      .topHeader .outlinePar {
+        display: none; } }
 
 .topPage img {
-  height: 25em;
-  width: 60em; }
-
-.imgDiv {
-  transition: all 1s ease; }
-  @media only screen and (min-width: 700px) {
-    .imgDiv {
-      padding: 0% 3% 2% 5%;
-      width: 50%; } }
-
-.mainImage {
   width: 100%;
-  transition: all 1s ease; }
+  max-height: 370px;
+  padding-bottom: 2rem;
+  border-bottom: 1px dotted #666666; }
 
-.photoTitle {
-  color: #999999; }
+.mainPageButton {
+  display: flex; }
 
 .thumbnailImages {
   display: flex;
-  flex-flow: row wrap; }
-
-.titlePhotoDiv {
-  border-top: 1px dotted #666666;
-  margin-bottom: 20px; }
+  flex-flow: row wrap;
+  justify-content: space-around; }
 
 .uploadedPhoto {
-  margin-top: 2%;
-  border: 5px double transparent;
-  width: 300px;
+  margin-top: 2rem;
+  width: 320.22px;
   height: 200px;
-  -webkit-filter: invert(0.1); }
-
-.uploadedPhoto:hover {
-  -webkit-filter: invert(0); }
-
-div.inputTextName {
-  border: 2px solid blue; }
+  -webkit-filter: invert(0.2); }
+  .uploadedPhoto:hover {
+    -webkit-filter: none; }
 
 .form-style-8 {
   padding: 30px;
@@ -149,63 +105,47 @@ div.inputTextName {
   resize: none;
   overflow: hidden; }
 
-.loginImg img {
-  -webkit-filter: blur(3px) brightness(1.2);
-  width: 100%; }
-
-.textLink {
-  margin-bottom: 5%; }
-
-.singleImage {
-  box-shadow: 2px 2px 20px 2px #666666;
-  width: 100%; }
-
-.editNdeletBtn {
+.featureNthumbs {
   display: flex;
-  flex-flow: row nowrap; }
-
-.singlePhotoPar {
-  text-align: justify;
-  font-size: 12px; }
+  margin-top: 2rem;
+  justify-content: center;
+  margin-bottom: 10rem; }
+  @media only screen and (max-width: 700px) {
+    .featureNthumbs {
+      flex-flow: row wrap; } }
 
 .buttonBar {
   display: flex;
-  flex-flow: row wrap;
-  padding: 1% 0% 5% 0%; }
+  margin: 1rem; }
 
-@media only screen and (min-width: 700px) {
-  .thumbWrapper {
-    display: block;
-    padding: 3%;
-    height: 44em;
-    width: 450px;
-    overflow-x: hidden;
-    margin-top: 10%; }
-    .thumbWrapper ::-webkit-scrollbar-track {
-      background-color: #b46868; } }
+.editNdeletBtn {
+  display: flex; }
+
+.singleImage {
+  width: 100%; }
 
 .mainPhotoWrapper {
-  padding-right: 5%;
-  padding-left: 5%; }
+  max-height: 50rem; }
 
-@media only screen and (min-width: 700px) {
-  .textWrap {
-    padding: 5%; }
-  .featureNthumbs {
-    display: flex; }
-  .mainPhotoWrapper {
-    flex-flow: row wrap;
-    padding: 5% 0% 5% 0%;
-    width: 100%; } }
+.thumbWrapper {
+  justify-content: space-between;
+  width: 100%;
+  max-height: 38rem;
+  overflow-x: hidden;
+  margin: 0 1rem; }
+  @media only screen and (max-width: 700px) {
+    .thumbWrapper {
+      display: none; } }
 
 @media only screen and (max-width: 940px), only screen and (max-device-width: 940px) {
-  border: 2px solid red; }
+  body {
+    border: 2px solid red; } }
 
 @media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
-  border: 2px solid yellow; }
+  body-border: 2px solid yellow; }
 
 @media only screen and (max-width: 530px), only screen and (max-device-width: 530px) {
-  border: 2px solid blue; }
+  body-border: 2px solid blue; }
 
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
-  border: 2px solid green; }
+  body-border: 2px solid green; }

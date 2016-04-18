@@ -46,11 +46,11 @@ html(lang="en")
         .thumbWrapper
           each thumb in thumbs
             .eachPhotoContent
-              //- h4 #{thumb.title}
 
               //- every photo that gets uploaded
               a(href='#{thumb.id}')
                 img.uploadedPhoto(src='#{thumb.link}')
+                p #{thumb.title}
 
   script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
   script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')

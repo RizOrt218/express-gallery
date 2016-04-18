@@ -9,17 +9,17 @@ html(lang="en")
       .spaceHeader
       .topHeader
         .mainHeader
-          h1 _City Lights
+          h1 City Lights
         .outlinePar
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
-      .mainPageButton.right
+      .mainPageButton
         form.postForm(method="GET", action="/gallery/new")
           button.btn.btn-flat(type="submit", value="submit") Post New
 
         form.logoutForm(method="GET", action="/users/logout")
           button.btn.btn-flat(type="submit", value="submit") Logout
 
-      .topPage
+      .topPage.l12
         img.mainImage(src='http://www.mymusicisbetterthanyours.com/wp-content/uploads/2014/05/san-fran-night.jpg')
 
       block content

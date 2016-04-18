@@ -2,187 +2,97 @@
   margin: 0px;
   box-sizing: border-box;
   color: lighten(#666, 20%);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
-// MEDIA QUERY RANGES
-
-$small: "only screen and (min-width:500px)";
-$medium: "only screen and (min-width:700px)";
-$large: "only screen and (min-width:900px)";
-
-$colorVariable: #C1A385;
+$small: "only screen and (max-width:400px)";
+$medium: "only screen and (max-width:700px)";
+$mainGray: #666666;
 
 @import url(https://fonts.googleapis.com/css?family=Russo+One);
 
-//========== LANDING PAGE ===============//
+// Landing Page
 
 .mainPic {
-  background-image: url('http://a.fastcompany.net/multisite_files/coexist/imagecache/1280/article_feature/1280-boston-ma-smart-city.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+    img {
+    position: fixed;
+    width: 100%;
+  }
 }
 
 .title {
   position: absolute;
-  z-index: 5;
-  height: 100%;
-  width: 14em;
-  background-color: lighten(rgba(#270D03, 0.3), 4%);
-
+  z-index: 2;
+  width: 100%;
+  min-height: 50px;
+  background-color: rgba(#343E3E, 0.7);
+  text-align: center;
+  top: 30rem;
   p {
-    font-family: 'Russo One', sans-serif;
-    font-size: 25px;
+    font-family: "Russo One", sans;
+    font-size: 50px;
   }
+}
+
+// Header
+.spaceHeader {
+  border-bottom: 1px dotted $mainGray;
+  padding-bottom: 4rem;
 }
 
 .topHeader {
   display: flex;
-
+  margin: 1rem 0rem;
   .mainHeader {
-    text-shadow: 1px 3px 5px #666666;
-    color: #666666;
-    // float: right;
     margin: auto;
-
-    h1 {
-      font-family: 'Russo One', sans-serif;
-      @media #{$medium} {margin: auto 30px;}
-      @media #{$large} {margin: auto 100px;}
-    }
+    h1 {font-family: "Russo One", sans;}
   }
+
   .outlinePar {
-    flex: 0 1 auto;
-    display: none;
-    border-left: 1px dotted #666666;
-    padding: 10px;
-    font-size: 12px;
-    margin: auto;
-    @media #{$medium} {display: block;}
-    @media #{$large} {flex: 1 0 auto;}
+    width: 20rem;
+    min-height: 30px;
+    border-left: 1px dotted $mainGray;
+    padding-left: 10px;
+
+    @media #{$small} {display: none;}
+    @media #{$medium} {display: none;}
   }
 }
 
-.navBar {
-  z-index: 6;
-  display: flex;
-  flex-flow: column wrap;
-  float: right;
-}
+// Layout
+.topPage {
+  img {
+    width: 100%;
+    max-height: 370px;
+    padding-bottom: 2rem;
+    border-bottom: 1px dotted $mainGray;
 
-#login:hover, #register:hover, #galleries:hover {
-  // border-bottom: 1px solid white;
-  // color: white;
-}
-
-//=========== STATIC PAGE ===============//
-body {
-  background-size: cover;
-}
-
-.topbar {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  }
 }
 
 .mainPageButton {
   display: flex;
-  padding-left: 3%;
-
-  // @media #{ $medium } {
-  //   // margin-bottom: -5px;
-  //   padding-left: 5%;
-  // }
-
 }
 
-.spaceHeader {
-  height: 6em;
-  border-bottom: 1px dotted #666666;
-  margin-bottom: 16px;
-}
-
-
-// .outlinePar {
-//   display: none;
-
-//   @media #{$medium} {
-//   padding: 10px;
-//   font-size: 12px;
-//   margin: auto}
-// }
-
-//========= STATIC PHOTO =============//
-
-.topPage img {
-  height: 25em;
-  width: 60em;
-}
-// .outlinePr {
-//   display: none;
-
-//   @media #{ $medium } {
-//     text-align: justify;
-//     // padding: 3% 6% 3% 3%;
-//     width: 50%;
-//     display: block;
-//     color: #666666;
-//     font-size: 18px;
-//     line-height: 19px;
-//   }
-// }
-.imgDiv {
-  transition: all 1s ease;
-
-  @media #{ $medium } {
-    padding: 0% 3% 2% 5%;
-    width: 50%;
-  }
-}
-.mainImage {
-  width: 100%;
-  transition: all 1s ease;
-}
-
-//========= EACH PHOTO CONTENT =======
-
-.photoTitle {
-  color: lighten(#666, 20%);
-  @media #{ $medium } {
-    // font-size: 25px;
-  }
-}
-
+// All Photots
 .thumbnailImages {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
 }
-.titlePhotoDiv {
-  border-top: 1px dotted #666666;
-  margin-bottom: 20px;
-}
+
 .uploadedPhoto {
-  margin-top: 2%;
-  border: 5px double transparent;
-  width: 300px;
+  margin-top: 2rem;
+  width: 320.22px;
   height: 200px;
-  -webkit-filter: invert(0.1);
+  -webkit-filter: invert(0.2);
+  &:hover {-webkit-filter: none;}
 }
 
-.uploadedPhoto:hover {
-  -webkit-filter: invert(0);
-}
-
-div.inputTextName {
-  border: 2px solid blue;
-}
+// Forms
 
 .form-style-8{
 
-    // margin: auto;
-    // font-family: 'Open Sans Condensed', arial, sans;
-    // width: 500px;
     padding: 30px;
     margin: 50px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -224,88 +134,50 @@ div.inputTextName {
     overflow: hidden;
 }
 
-.loginImg img {
-  -webkit-filter: blur(3px) brightness(1.2);
-  width: 100%;
-}
-
-//=== SINGLE PHOTO /gallery/:id ========//
-
-.textLink {
-  margin-bottom: 5%;
-}
-.singleImage {
-  box-shadow: 2px 2px 20px 2px #666666;
-  width: 100%;
-}
-.editNdeletBtn {
+// single image
+.featureNthumbs {
   display: flex;
-  flex-flow: row nowrap;
-}
-.singlePhotoPar {
-  text-align: justify;
-  // padding-top: 5%;
-  font-size: 12px;
-}
-.buttonBar {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 1% 0% 5% 0%;
+  margin-top: 2rem;
+  justify-content: center;
+  margin-bottom: 10rem;
+
+  @media #{$medium} {flex-flow: row wrap;}
 }
 
-.thumbWrapper {
+.buttonBar {display: flex; margin: 1rem;}
+.editNdeletBtn {display: flex;}
+.singleImage {width: 100%;}
 
-  @media #{ $medium } {
-    display: block;
-    padding: 3%;
-    height: 44em;
-    width: 450px;
-    overflow-x: hidden;
-    margin-top: 10%;
-
-    ::-webkit-scrollbar-track {
-        background-color: #b46868;
-    }
-  }
-}
 .mainPhotoWrapper {
-  padding-right: 5%;
-  padding-left: 5%;
+  max-height: 50rem;
+
 }
-
-@media #{ $medium } {
-  .textWrap {
-    padding: 5%;
-  }
-  .featureNthumbs {
-    display: flex;
-
-
-  }
-  .mainPhotoWrapper {
-  flex-flow: row wrap;
-    padding: 5% 0% 5% 0%;
-    width: 100%;
-  }
+.thumbWrapper {
+  justify-content: space-between;
+  width: 100%;
+  max-height: 38rem;
+  overflow-x: hidden;
+  margin: 0 1rem;
+  @media #{$medium} {display: none;}
 }
 
 @media only screen and (max-width : 940px),
 only screen and (max-device-width : 940px){
-  border: 2px solid red;
+  body {border: 2px solid red;}
 }
 
 @media only screen and (max-width : 720px),
 only screen and (max-device-width : 720px){
-  border: 2px solid yellow;
+  body: {border: 2px solid yellow;}
 }
 
 @media only screen and (max-width : 530px),
 only screen and (max-device-width : 530px){
-  border: 2px solid blue;
+  body: {border: 2px solid blue;}
 }
 
 @media only screen and (max-width : 320px),
 only screen and (max-device-width : 320px){
-  border: 2px solid green;
+  body: {border: 2px solid green;}
 
 }
