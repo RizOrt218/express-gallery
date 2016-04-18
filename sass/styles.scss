@@ -52,14 +52,14 @@ $colorVariable: #C1A385;
     }
   }
   .outlinePar {
-    flex: 1 0 13%;
+    flex: 0 1 auto;
     display: none;
     border-left: 1px dotted #666666;
     padding: 10px;
     font-size: 12px;
     margin: auto;
     @media #{$medium} {display: block;}
-    @media #{$large} {flex: 1 0 30%;}
+    @media #{$large} {flex: 1 0 auto;}
   }
 }
 

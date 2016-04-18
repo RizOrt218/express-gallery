@@ -35,7 +35,7 @@
         .topHeader .mainHeader h1 {
           margin: auto 100px; } }
   .topHeader .outlinePar {
-    flex: 1 0 13%;
+    flex: 0 1 auto;
     display: none;
     border-left: 1px dotted #666666;
     padding: 10px;
@@ -46,7 +46,7 @@
         display: block; } }
     @media only screen and (min-width: 900px) {
       .topHeader .outlinePar {
-        flex: 1 0 30%; } }
+        flex: 1 0 auto; } }
 
 .navBar {
   z-index: 6;
