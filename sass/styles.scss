@@ -2,7 +2,6 @@
   margin: 0px;
   box-sizing: border-box;
   color: lighten(#666, 20%);
-  transition: all 0.5s ease;
 }
 
 $small: "only screen and (max-width:400px)";
@@ -159,25 +158,4 @@ $mainGray: #666666;
   overflow-x: hidden;
   margin: 0 1rem;
   @media #{$medium} {display: none;}
-}
-
-@media only screen and (max-width : 940px),
-only screen and (max-device-width : 940px){
-  body {border: 2px solid red;}
-}
-
-@media only screen and (max-width : 720px),
-only screen and (max-device-width : 720px){
-  body: {border: 2px solid yellow;}
-}
-
-@media only screen and (max-width : 530px),
-only screen and (max-device-width : 530px){
-  body: {border: 2px solid blue;}
-}
-
-@media only screen and (max-width : 320px),
-only screen and (max-device-width : 320px){
-  body: {border: 2px solid green;}
-
 }
