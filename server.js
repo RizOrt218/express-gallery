@@ -13,7 +13,13 @@ var CONFIG         = require( './config/config' );
 var bcrypt         = require('bcrypt');
 app.use( bodyParser.urlencoded ( { extended : true } ) );
 
-app.use( session( CONFIG.SESSION ) );
+app.use( session( CONFIG.SESSION ) ||
+    {
+      secret : 'sdfghjsdfgh',
+      resave : false,
+      saveUninitialized : true
+    }
+);
 app.use( passport.initialize() );
 app.use( passport.session() );
 
