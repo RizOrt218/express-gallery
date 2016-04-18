@@ -1,8 +1,6 @@
 Express Gallery
 ===============
 
-![screen shot 2016-04-17 at 3 36 09 am](https://cloud.githubusercontent.com/assets/14135082/14587391/e13c8154-044d-11e6-9cda-bd26dffaf56a.png)
-
 ![screen shot 2016-04-17 at 5 49 07 pm](https://cloud.githubusercontent.com/assets/14135082/14593337/f2302660-04c4-11e6-9b5f-fa94d4af1128.png)
 
 Express, Sequelize, HTML5, stored on PostgreSQL
