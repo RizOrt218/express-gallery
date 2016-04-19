@@ -13,7 +13,7 @@ var LocalStrategy  = require( 'passport-local' ).Strategy;
 var bcrypt         = require('bcrypt');
 app.use( bodyParser.urlencoded ( { extended : true } ) );
 
-app.use( session( CONFIG.SESSION  ||
+app.use( session(
     {
       secret : 'sdfghjsdfgh',
       resave : false,
