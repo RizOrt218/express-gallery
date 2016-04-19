@@ -17,8 +17,6 @@ html(lang="en")
         h2 Edit Post
         form(action="/gallery/#{gallery.id}", method="POST")
           input(type="hidden" name="_method" value="PUT")
-          //- div Author &nbsp
-          //- input(type="text" value="#{gallery.author}" name="author")
           div Title&nbsp
             input(type="text" name="title" value="#{gallery.title}" autofocus)
           div Link &nbsp

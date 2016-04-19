@@ -31,8 +31,6 @@ passport.deserializeUser( function ( user, done ) {
   return done( null, user );
 });
 
-// var isAuthenticated = false;
-
 passport.use( new LocalStrategy(
   function ( username, password, done ) {
     // console.log("password", hashPass);
