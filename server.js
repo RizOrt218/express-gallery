@@ -9,11 +9,11 @@ var methodOverride = require('method-override');
 var passport       = require( 'passport' );
 var session        = require( 'express-session' );
 var LocalStrategy  = require( 'passport-local' ).Strategy;
-var CONFIG         = require( './config/config' );
+// var CONFIG         = require( './config/config' );
 var bcrypt         = require('bcrypt');
 app.use( bodyParser.urlencoded ( { extended : true } ) );
 if(env === 'development'){
-  var sConfig = require('./config/express-session-config.json');
+  var sConfig = require('./config/config');
 }
 
 app.use( session({
