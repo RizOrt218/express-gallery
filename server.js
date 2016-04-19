@@ -9,18 +9,19 @@ var methodOverride = require('method-override');
 var passport       = require( 'passport' );
 var session        = require( 'express-session' );
 var LocalStrategy  = require( 'passport-local' ).Strategy;
-// var CONFIG         = require( './config/config' );
+var CONFIG         = require( './config/config' );
 var bcrypt         = require('bcrypt');
 app.use( bodyParser.urlencoded ( { extended : true } ) );
+if(env === 'development'){
+  var sConfig = require('./config/express-session-config.json');
+}
 
-app.use( session(
-    {
-      secret : 'sdfghjsdfgh',
-      resave : false,
-      saveUninitialized : true
-    }
-  )
-);
+app.use( session({
+  "secret" : process.env.SECRET || sConfig.secret,
+  "saveUninitialized" : true,
+  "resave" : true
+}));
+
 app.use( passport.initialize() );
 app.use( passport.session() );
 
