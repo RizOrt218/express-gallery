@@ -1,9 +1,7 @@
 var express   = require( 'express' );
 var router    = express.Router();
-
 var db        = require( './../models' );
 var Gallery   = db.Gallery;
-
 var bodyParser= require( 'body-parser' );
 
 router.use( bodyParser.urlencoded ( { extended : true } ) );
@@ -34,6 +32,7 @@ router.route('/new')
 
 router.route('/')
   .get( function ( req, res ) {
+
     Gallery.findAll()
       .then( function ( allPhotos ) {
         res.render( 'gallery/allPhotos', {
@@ -42,6 +41,7 @@ router.route('/')
       });
   })
   .post( function (req, res ) {
+
     Gallery.create(
       {
         author: req.body.author,
@@ -58,6 +58,8 @@ router.route('/')
 
 router.route('/test')
   .get( function (req, res ) {
+    console.log("REQUEST", req);
+    console.log("RESPOND", res);
     res.render( 'test_landing_page' );
   }
 );

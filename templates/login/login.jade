@@ -3,11 +3,26 @@ html(lang="en")
 head
   meta(charset="UTF-8")
   link(rel="stylesheet" href="./../css/styles.css")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
+  meta(name='viewport', content='width=device-width, initial-scale=1')
   title Login
 body
-  form(method="POST" action="/users/login")
-    div.inputTextName Username&nbsp
-      input(type="text" name="username")
-    div.inputTextName Password&nbsp&nbsp
-      input(type="password" name="password")
-    button.editButton(type="submit") Login
+  .container
+    .spaceHeader
+    .topHeader
+      .mainHeader
+        h1 _City Lights
+      .outlinePar
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
+    div.form-style-8
+      h2 Login to your account
+      form(method="POST" action="/users/login")
+        input(type="text" name="username" placeholder="Username")
+        input(type="password" name="password" placeholder="Password")
+        button.waves-effect.waves-light.btn-large(type="submit") Login
+      form
+    div
+
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+  script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")

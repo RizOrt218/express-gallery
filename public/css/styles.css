@@ -1,332 +1,137 @@
-@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Russo+One);
 * {
-  margin: 0px; }
-
-* {
-  box-sizing: border-box; }
-
-.landingPage {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  background-color: #D7E0D9; }
-
-.title {
-  height: auto;
-  flex: 0 0 50%;
-  text-align: center;
-  font-family: 'Rock Salt', cursive;
-  color: #34693F; }
-
-.mainPic {
-  flex: 0 1 90%;
-  background-image: fill; }
+  margin: 0px;
+  box-sizing: border-box;
+  color: #999999; }
 
 .mainPic img {
-  flex-shrink: 0;
-  min-height: auto;
-  min-width: 100%;
-  border-radius: 5px; }
+  position: fixed;
+  width: 100%; }
 
-.navBar {
-  display: flex;
-  flex-flow: row wrap;
-  flex: 0 0 90%;
-  justify-content: space-between; }
-
-.landingPageNav {
-  text-decoration: none; }
-
-.button {
-  height: 30px;
-  width: 100px;
-  background: #9dcca6;
-  background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-  -webkit-border-radius: 15;
-  -moz-border-radius: 15;
-  border-radius: 15px;
-  text-shadow: 1px 1px 3px #666666;
-  -webkit-box-shadow: 0px 1px 10px #666666;
-  -moz-box-shadow: 0px 1px 10px #666666;
-  box-shadow: 0px 1px 10px #666666;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
+.title {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  min-height: 50px;
+  background-color: rgba(52, 62, 62, 0.7);
   text-align: center;
-  text-decoration: none;
-  flex-grow: 1;
-  margin: 10px; }
+  top: 30rem; }
+  .title p {
+    font-family: "Russo One", sans;
+    font-size: 50px; }
 
-.button.galleries {
-  padding: 10px;
-  text-decoration: none; }
+.spaceHeader {
+  border-bottom: 1px dotted #666666;
+  padding-bottom: 4rem; }
 
-body {
-  background-image: url(http://www.leeminhoworld.com/images/bckg/body-bg/watercolor.jpg);
-  background-size: cover; }
-
-.topbar {
+.topHeader {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center; }
+  margin: 1rem 0rem; }
+  .topHeader .mainHeader {
+    margin: auto; }
+    .topHeader .mainHeader h1 {
+      font-family: "Russo One", sans; }
+  .topHeader .outlinePar {
+    width: 20rem;
+    min-height: 30px;
+    border-left: 1px dotted #666666;
+    padding-left: 10px; }
+    @media only screen and (max-width: 400px) {
+      .topHeader .outlinePar {
+        display: none; } }
+    @media only screen and (max-width: 700px) {
+      .topHeader .outlinePar {
+        display: none; } }
+
+.topPage img {
+  width: 100%;
+  max-height: 370px;
+  padding-bottom: 2rem;
+  border-bottom: 1px dotted #666666; }
 
 .mainPageButton {
+  display: flex; }
+
+.thumbnailImages {
   display: flex;
-  padding-left: 3%;
-  margin-bottom: -9px;
-  border-top: 10px solid #666666; }
-  @media only screen and (min-width: 600px) {
-    .mainPageButton {
-      margin-bottom: -5px;
-      padding-left: 5%; } }
-
-.logoutForm {
-  margin-left: -15px; }
-
-.textStyle {
-  color: #666666;
-  word-wrap: break-word;
-  text-shadow: 1px 3px 5px #666666;
-  font-family: "Poiret One"; }
-
-.mainHeader {
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-  font-family: "Poiret One";
-  justify-content: center;
-  text-shadow: 1px 3px 5px #666666;
-  color: white;
-  font-size: 20px;
-  padding: 5%; }
-
-.wholeGalleryWrapper {
-  box-shadow: 0px 5px 10px #666666;
-  background-color: white;
-  margin: auto;
-  padding-bottom: 7%;
-  width: 90%; }
-
-.postLogButton {
-  height: 40px;
-  width: 100px;
-  background: #9dcca6;
-  background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-  -webkit-border-radius: 15;
-  -moz-border-radius: 15;
-  border-radius: 10px;
-  text-shadow: 1px 1px 3px #666666;
-  -webkit-box-shadow: 0px 1px 10px #666666;
-  -moz-box-shadow: 0px 1px 10px #666666;
-  box-shadow: 0px 1px 10px #666666;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 15px;
-  text-align: center;
-  text-decoration: none;
-  flex-grow: 1;
-  margin: 10px; }
-
-.postLogButton:hover {
-  color: #9dcca6; }
-
-.topPage {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center; }
-
-.pLayout {
-  display: none;
-  font-family: "Poiret One"; }
-  @media only screen and (min-width: 600px) {
-    .pLayout {
-      text-align: justify;
-      padding: 3% 6% 3% 3%;
-      width: 50%;
-      display: block;
-      color: #666666;
-      font-size: 18px;
-      line-height: 19px; } }
-
-.imgDiv {
-  transition: all 1s ease; }
-  @media only screen and (min-width: 600px) {
-    .imgDiv {
-      padding: 0% 3% 2% 5%;
-      width: 50%; } }
-
-.mainImage {
-  width: 100%;
-  transition: all 1s ease; }
-
-.photoTitle {
-  font-size: 30px;
-  color: #666666; }
-  @media only screen and (min-width: 600px) {
-    .photoTitle {
-      font-size: 25px; } }
-
-@media only screen and (min-width: 600px) {
-  .thumbnailImages {
-    margin: 0% 5% 5% 5%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between; } }
-
-@media only screen and (min-width: 600px) {
-  .titlePhotoDiv {
-    flex-flow: row wrap;
-    margin-top: 10px;
-    padding: 2%; } }
+  flex-flow: row wrap;
+  justify-content: space-around; }
 
 .uploadedPhoto {
-  margin-top: 2%;
-  border: 5px double #666666;
-  width: 100%; }
-  @media only screen and (min-width: 600px) {
-    .uploadedPhoto {
-      height: 220px;
-      width: 320px; } }
+  margin-top: 2rem;
+  width: 320.22px;
+  height: 200px;
+  -webkit-filter: invert(0.2); }
+  .uploadedPhoto:hover {
+    -webkit-filter: none; }
 
-.uploadedPhoto:hover {
-  border: 8px double #9dcca6; }
+.form-style-8 {
+  padding: 30px;
+  margin: 50px auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22); }
 
-.formWrapper {
-  border: 2px solid black;
-  padding: 5%;
-  background: #9dcca6;
-  background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5); }
+.form-style-8 h2 {
+  background: #4D4D4D;
+  text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
+  color: #797979;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 20px;
+  margin: -30px -30px 30px -30px; }
 
-div.inputTextName {
-  font-family: "Poiret One";
-  font-size: 30px; }
+.form-style-8 input[type="text"],
+.form-style-8 input[type="password"],
+.form-style-8 textarea,
+.form-style-8 select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  margin-bottom: 10px;
+  font: 16px Arial, Helvetica, sans-serif;
+  height: 45px; }
 
-.submitButton {
-  height: 40px;
-  width: 100px;
-  background: #9dcca6;
-  background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-  -webkit-border-radius: 15;
-  -moz-border-radius: 15;
-  border-radius: 15px;
-  text-shadow: 1px 1px 3px #666666;
-  -webkit-box-shadow: 0px 1px 10px #666666;
-  -moz-box-shadow: 0px 1px 10px #666666;
-  box-shadow: 0px 1px 10px #666666;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  text-decoration: none;
-  flex-grow: 1;
-  margin: 10px; }
+.form-style-8 textarea {
+  resize: none;
+  overflow: hidden; }
 
-.submitButton:hover {
-  color: #9dcca6; }
-
-.textLink {
-  font-size: 16px;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
-  padding-bottom: 2%;
-  margin-bottom: 5%;
-  padding-top: 2%;
-  margin-top: 2%; }
-
-.singleImage {
-  box-shadow: 2px 2px 20px 2px #666666;
-  width: 100%; }
-
-.editNdeletBtn {
+.featureNthumbs {
   display: flex;
-  flex-flow: row nowrap; }
-
-.singlePhotoPar {
-  box-shadow: 0px 5px 10px #666666;
-  text-align: justify;
-  font-family: "Poiret One";
-  padding: 5%;
-  background-color: white;
-  padding-top: 5%;
-  font-size: 18px; }
+  margin-top: 2rem;
+  justify-content: center;
+  margin-bottom: 10rem; }
+  @media only screen and (max-width: 700px) {
+    .featureNthumbs {
+      flex-flow: row wrap; } }
 
 .buttonBar {
   display: flex;
-  flex-flow: row wrap;
-  padding: 1% 0% 5% 0%; }
+  margin: 1rem; }
 
-.singleButtonStyle {
-  height: 30px;
-  width: 100px;
-  background: #9dcca6;
-  background-image: -webkit-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -moz-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -ms-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: -o-linear-gradient(top, #9dcca6, #e1ede5);
-  background-image: linear-gradient(to bottom, #9dcca6, #e1ede5);
-  -webkit-border-radius: 15;
-  -moz-border-radius: 15;
-  border-radius: 10px;
-  text-shadow: 1px 1px 3px #666666;
-  -webkit-box-shadow: 0px 1px 10px #666666;
-  -moz-box-shadow: 0px 1px 10px #666666;
-  box-shadow: 0px 1px 10px #666666;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 15px;
-  text-align: center;
-  text-decoration: none;
-  flex-grow: 1; }
+.editNdeletBtn {
+  display: flex; }
 
-.editButton:hover {
-  color: #9dcca6; }
-
-.deleteButton:hover {
-  color: #9dcca6; }
-
-.backButton:hover {
-  color: #9dcca6; }
-
-.thumbWrapper {
-  display: none; }
-  @media only screen and (min-width: 600px) {
-    .thumbWrapper {
-      display: block;
-      padding: 3%;
-      height: 1000px;
-      width: 550px;
-      overflow-x: hidden; }
-      .thumbWrapper ::-webkit-scrollbar-track {
-        background-color: #b46868; } }
+.singleImage {
+  width: 100%; }
 
 .mainPhotoWrapper {
-  padding-right: 5%;
-  padding-left: 5%; }
+  max-height: 50rem; }
 
-@media only screen and (min-width: 600px) {
-  .textWrap {
-    padding: 5%; }
-  .featureNthumbs {
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 5%; }
-  .mainPhotoWrapper {
-    flex-flow: row wrap;
-    padding: 5% 0% 5% 0%;
-    width: 100%; } }
+.thumbWrapper {
+  justify-content: space-between;
+  width: 100%;
+  max-height: 38rem;
+  overflow-x: hidden;
+  margin: 0 1rem; }
+  @media only screen and (max-width: 700px) {
+    .thumbWrapper {
+      display: none; } }

@@ -28,7 +28,6 @@ gulp.task('livereload', function (){
 });
 
 gulp.task('watch', function () {
-  // gulp.watch('./scss/**/*.scss', ['sass']);
   gulp.watch('sass/styles.scss', ['sass']);
   gulp.watch('./public/**/*', ['livereload']);
 });

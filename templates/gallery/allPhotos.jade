@@ -4,13 +4,9 @@ extends ./../layout
 block content
   .thumbnailImages
     each photo in gallery
-      .titlePhotoDiv
-        .photoTitle.textStyle
-          h4 #{photo.title}
+      .eachPhoto
+        a(href='gallery/#{photo.id}')
+          img.uploadedPhoto(src='#{photo.link}')
 
-        .eachPhoto
-          a(href='gallery/#{photo.id}')
-            img.uploadedPhoto(src='#{photo.link}')
-
-        //- div.photoDescription
-          p #{photo.description}
+        .photoTitle.textStyle.truncate
+          p #{photo.title}

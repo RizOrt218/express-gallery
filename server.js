@@ -9,16 +9,19 @@ var methodOverride = require('method-override');
 var passport       = require( 'passport' );
 var session        = require( 'express-session' );
 var LocalStrategy  = require( 'passport-local' ).Strategy;
-var CONFIG         = require( './config/config' );
+// var CONFIG         = require( './config/config' );
 var bcrypt         = require('bcrypt');
 app.use( bodyParser.urlencoded ( { extended : true } ) );
+if(env === 'development'){
+  var sConfig = require('./config/config.json');
+}
 
-//configures for connect-flash === grabbed it from npm examples
-// app.use(express.cookieParser('keyboard cat'));
-// app.use(express.session({ cookie: { maxAge: 60000 }}));
-// app.use(flash());
+app.use( session({
+  "secret" : process.env.SECRET || sConfig.secret,
+  "saveUninitialized" : true,
+  "resave" : true
+}));
 
-app.use( session( CONFIG.SESSION ) );
 app.use( passport.initialize() );
 app.use( passport.session() );
 
@@ -29,8 +32,6 @@ passport.serializeUser( function ( user, done ) {
 passport.deserializeUser( function ( user, done ) {
   return done( null, user );
 });
-
-// var isAuthenticated = false;
 
 passport.use( new LocalStrategy(
   function ( username, password, done ) {
@@ -69,11 +70,11 @@ app.use(express.static('public'));
 app.use( '/users', userRoute );
 app.use( '/gallery', galleryRoute );
 app.use( '/home', landingPage );
-// app.use( '/', userRoute );
+app.use( '/', landingPage );
 
 app.set('view engine', 'jade');
 app.set('views', './templates');
 
-app.listen( 7766, function () {
+app.listen( process.env.PORT || CONFIG.PORT, function () {
   db.sequelize.sync();
 });

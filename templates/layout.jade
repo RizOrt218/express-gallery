@@ -1,24 +1,29 @@
-doctype html
 html(lang="en")
   head
     link(rel="stylesheet" href="/css/styles.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     title
   body
-    .wholeGalleryWrapper
-      .mainHeader
-        h1 HEADER
-
+    .container
+      .spaceHeader
+      .topHeader
+        .mainHeader
+          h1 City Lights
+        .outlinePar
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
       .mainPageButton
         form.postForm(method="GET", action="/gallery/new")
-          button.postLogButton(type="submit", value="submit") Post New
+          button.btn.btn-flat(type="submit", value="submit") Post New
 
         form.logoutForm(method="GET", action="/users/logout")
-          button.postLogButton(type="submit", value="submit") Logout
+          button.btn.btn-flat(type="submit", value="submit") Logout
 
-      .topPage
-        .imgDiv
-          img.mainImage(src='http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/07/9-Beautiful-HD-Wallpapers-0.jpg')
-        .pLayout
-          p.topParagraph Pommy ipsum yorkshire mixture chips some mothers do 'ave 'em knee high to a grasshopper i'll be a monkey's uncle wellies, red telephone box indeed gobsmacked it's cracking flags. pot noodle a bottle of plonk good old fashioned knees up. Blimey Victoria sponge cake numbskull have a kip blighty Southeners numbskull skive every fortnight well fit collywobbles, gosh anorak munta penny-dreadful throw a spanner in the works supper it's the bees knees twiglets. Bit of alright cup of tea River Song trouble and strife The Hounds of Baskerville devonshire cream tea shortbread what a load of cobblers, ey up duck bull dog quid Big Ben driving a mini. It's me peepers oopsy-daisies sorted it, ey up chuck.
+      .topPage.l12
+        img.mainImage(src='http://www.mymusicisbetterthanyours.com/wp-content/uploads/2014/05/san-fran-night.jpg')
 
       block content
+
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+  script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")

@@ -2,33 +2,39 @@ doctype html
 html(lang="en")
   head
     link(rel="stylesheet" href="./../css/styles.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     title
   body
-    .wholeGalleryWrapper
-      .mainHeader
-        h1 HEADER
+    .container
+      .spaceHeader
+      .topHeader
+        .mainHeader
+          h1 City Lights
+        .outlinePar
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur laborum error sapiente, velit corrupti sed, officiis non sint sunt. Nemo vitae molestias, adipisci quidem temporibus. Optio neque ut ullam!
 
       .featureNthumbs
         .mainPhotoWrapper
-          .photoTitle.textStyle
-            h4 #{gallery.title}
+          .photoTitle
+            p #{gallery.title}
             .textLink
-              p #{gallery.link}
-            img.singleImage(src='#{gallery.link}')
+              a(href="#{gallery.link}") Image Site
+            img.materialboxed.singleImage(src='#{gallery.link}')(width="650")
 
           .buttonBar
-            if user.id === gallery.UserId
-              .editNdeletBtn
+            //- if user.id === gallery.UserId
+            .editNdeletBtn
 
-                form(method="GET", action="/gallery/#{gallery.id}/edit")
-                  button.singleButtonStyle(type="submit", value="submit") edit
+              form(method="GET", action="/gallery/#{gallery.id}/edit")
+                button.btn.btn-flat(type="submit", value="submit") edit
 
-                form(name="delete-photo", method="POST", action="/gallery/#{gallery.id}")
-                  input(type="hidden", name="_method", value="DELETE")
-                  button.singleButtonStyle(type="submit", value="submit") delete
+              form(name="delete-photo", method="POST", action="/gallery/#{gallery.id}")
+                input(type="hidden", name="_method", value="DELETE")
+                button.btn.btn-flat(type="submit", value="submit") delete
 
             form(method="GET", action="/gallery")
-              button.singleButtonStyle(type="submit", value="submit") back
+              button.btn.btn-flat(type="submit", value="submit") back
 
           block editContent
 
@@ -40,8 +46,12 @@ html(lang="en")
         .thumbWrapper
           each thumb in thumbs
             .eachPhotoContent
-              //- h4 #{thumb.title}
 
-              //every photo that gets uploaded
-              //- a(href='/#{thumb.id}')
-              img.uploadedPhoto(src='#{thumb.link}')
+              //- every photo that gets uploaded
+              a(href='#{thumb.id}')
+                img.uploadedPhoto(src='#{thumb.link}')
+                p #{thumb.title}
+
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+  script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
